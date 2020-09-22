@@ -1,11 +1,12 @@
 // Base
 body, html
-  font-family: "Source Sans Pro"
+  font-family: 'Roboto', sans-serif
   font-weight: 400
   font-size: 16px
   min-height: 100vh
   margin: 0px
-  color: #222
+  color: $black
+  background-color: #E5E5E5
   scroll-behavior: smooth
 
 *
@@ -20,9 +21,9 @@ a
   position: relative
   display: grid
   grid-template-rows: auto
-  grid-template-columns: auto [p-start] 30px [c-start] 1200px [c-end] 30px [p-end] auto
+  grid-template-columns: auto [p-start] 30px [c-start] 1400px [c-end] 30px [p-end] auto
   @include respond-to(xxl)
-    grid-template-columns: auto [p-start] 30px [c-start] 1100px [c-end] 30px [p-end] auto
+    grid-template-columns: auto [p-start] 30px [c-start] 1200px [c-end] 30px [p-end] auto
   @include respond-to(xl)
     grid-template-columns: auto [p-start] 30px [c-start] 900px [c-end] 30px [p-end] auto
   @include respond-to(lg)
@@ -49,23 +50,5 @@ h4
 p
   font-size: 1rem
   margin: 10px 0
-
-.ttu
-  text-transform: uppercase
-
-.tac
-  text-align: center
-
-.button
-  display: inline-block
-  margin-top: 10px
-  background: linear-gradient(45deg, #00C9FF, #92FE9D)
-  color: #fff
+a
   text-decoration: none
-  text-transform: uppercase
-  font-weight: 600
-  border-radius: 10px
-  transition: .25s ease
-  padding: 10px 20px
-  &:hover
-    opacity: .75

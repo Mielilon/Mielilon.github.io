@@ -1,0 +1,35 @@
+section.cases
+    margin-top: 0
+    overflow-x: hidden
+.cases
+    & .content
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-top: 89px
+    &__item
+        display: inline-block
+        margin: 0 20px
+        font-weight: normal
+        font-size: 20px
+        line-height: 30px
+    &__slider
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        grid-template-rows: 1fr
+        margin-top: 67px
+        width: 100%
+    &__card
+        border-radius: 10px
+        margin-right: 20px
+        &_last
+            position: relative
+            margin-top: 307px
+            & .cases__img
+                opacity: 30%
+            
+    &__img
+        max-width: 280px
+    &__arrow
+        top: 45%
+        left: 80px

@@ -38,15 +38,45 @@
         background: rgba(255, 255, 255, 0.05)
         transition: .3s
         
-        
+
+//arrow    
 .arrow
+    border: 2px solid $white
+.arrow_black
+    border: 2px solid $black
+.arrow, .arrow_black
     width: 11px
     height: 9px
-    border: 2px solid #FFFFFF
     border-top: none
     border-left: none
     transform: rotate(-30deg) skew(30deg) 
     display: inline-block
     margin-left: 16px
+.arrow__big
+    width: 20px
+    height: 18px
+    margin-left: 0
+    position: absolute
+    top: 12px
+    left: 7px
+.arrow-wrapper
+    position: absolute
+    right: 3%
+    z-index: 5
+    cursor: pointer
+.border-arrow
+    border: 2px solid $white
+.border-arrow_black
+    border: 2px solid $black
+.border-arrow, .border-arrow_black
+    background-color: transparent
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    position: relative
 
-        
+
+//background
+.background-gradient
+    background: linear-gradient(180deg, #232323 0%, #101010 100%)
+    color: $white

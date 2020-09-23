@@ -1,0 +1,38 @@
+.success
+    color: $black
+    display: flex
+    align-items: center
+    & .content
+        background-image: url('./../img/backgrounds/success.png')
+        height: 1000px
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        position: relative
+    &__title
+        text-align: center
+    &__item
+        max-width: 500px
+        position: absolute
+        &_1
+            top: 200px
+            left: 110px
+        &_2
+            bottom: 60px
+            right: 91px
+    &__description
+        font-size: 16px
+        font-weight: 300
+        line-height: 30px
+    &__little-title
+        font-size: 18px 
+        color: $black
+        font-weight: 400
+        position: relative
+        & span
+            position: absolute
+            font-family: 'Century Gothic B'
+            font-size: 40px
+            line-height: 50px
+            left: -36px
+            top: -14px

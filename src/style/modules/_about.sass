@@ -1,0 +1,76 @@
+.about
+    color: $white
+    margin-top: 60px
+    &-background
+        background-color: #08090B
+        padding-top: 80px
+    &-wrapper
+        display: flex
+        align-items: flex-start
+    &__title
+        text-align: center
+    &__video
+        display: inline-block
+        padding-left: 84px
+        position: relative
+        color: #666666
+        &::before
+            content: ''
+            background: url('./../img/icons/play.svg')
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+            position: absolute
+            width: 48px
+            height: 48px
+            top: 16px
+            left: 8px
+    &__sidebar
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    &__img
+        width: 100%
+        margin-top: 60px
+    &__info
+        margin-left: 64px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    &__para
+        font-weight: normal
+        font-size: 14px
+        line-height: 24px
+        &:first-child
+            margin-bottom: 40px
+        &:last-child
+            margin-top: 40px
+            
+
+
+
+
+.statistics
+    margin-bottom: 32px
+    background: linear-gradient(180deg, #08090B 0%, #232323 100%)
+    border-radius: 7px
+    padding: 10px 20px 40px 80px
+    width: 311px
+    &__titile
+        margin-top: 0
+        margin-bottom: 0
+        padding-bottom: 28px
+        position: relative
+        &::before
+            content: ''
+            background-color: $white
+            position: absolute
+            width: 25px
+            height: 2px
+            bottom: 12px
+            left: 0
+    &__description
+        font-weight: 300
+        font-size: 16px
+        line-height: 24px
+            

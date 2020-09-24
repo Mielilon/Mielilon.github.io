@@ -1,0 +1,57 @@
+section.calculator
+    .container
+        .content
+            h1.calculator__title Калькулятор стоимости
+            .calculator-wrapper
+                .calculator__items-wrapper
+                    h5.calculator__little-title Формат
+                    .calculator__items
+                        .calculator__item
+                            img(src="./img/icons/calculator-1.png", alt="").calculator__icon
+                            .calculator__info-wrapper
+                                input.checkbox.calculator__checkbox(type="checkbox" id="a4" name="format" value="A4")
+                                label.calculator__format.label(for="a4") A4
+                                p.calculator__description (210х297мм)
+                        .calculator__item
+                            img(src="./img/icons/calculator-2.png", alt="").calculator__icon
+                            .calculator__info-wrapper
+                                input.checkbox.calculator__checkbox(type="checkbox" id="a5" name="format" value="A5")
+                                label.calculator__format.label(for="a5") A5
+                                p.calculator__description (210х297мм)
+                        .calculator__item
+                            img(src="./img/icons/calculator-3.png", alt="").calculator__icon
+                            .calculator__info-wrapper
+                                input.checkbox.calculator__checkbox(type="checkbox" id="customizable" name="format" value="Сustomizable")
+                                label.calculator__format.label(for="customizable") Свой размер
+                                .calculator__parameters-wrapper
+                                    .calculator__parameter-wrapper
+                                        label.calculator__parameters.number-label(for="height") Высота
+                                        input.calculator__num-input.num-input(type="number" id="height" name="format")
+                                    .calculator__parameter-wrapper
+                                        label.calculator__parameters.number-label(for="width") Ширина
+                                        input.calculator__num-input.num-input(type="number" id="width" name="format")
+                .calculator__items-wrapper
+                    h5.calculator__little-title Ориентация
+                        .calculator__items
+                            .calculator__item
+                                img(src="./img/icons/calculator-4.png", alt="").calculator__icon
+                                .calculator__info-wrapper
+                                    input.checkbox.calculator__checkbox(type="checkbox" id="vertically" name="layout" value="vertically")
+                                    label.calculator__format.label(for="vertically")
+                            .calculator__item
+                                img(src="./img/icons/calculator-5.png", alt="").calculator__icon
+                                .calculator__info-wrapper
+                                    input.checkbox.calculator__checkbox(type="checkbox" id="horizontally" name="layout" value="horizontally")
+                                    label.calculator__format.label(for="horizontally")
+    .calculator__step
+        p.calculator__number Шаг 1/7
+        .arrow-wrapper
+            .border-arrow_black.calculator__border-arrow
+            .arrow_black.arrow__big.calculator__arrow
+
+
+
+
+
+                
+                

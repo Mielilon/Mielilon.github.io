@@ -1,0 +1,82 @@
+section.calculator
+    padding-top: 100px
+    margin-top: 0
+    background-color: #F6F6F6
+    padding-bottom: 60px
+
+.calculator
+    .content
+        border-bottom: 1px solid $black
+        padding-bottom: 100px
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            height: 1px
+            width: calc( 1 * (100% / 7) )
+            background: linear-gradient(to right, $green calc( 100% - 20px ), #F6F6F6 calc( 100% - 20px ))
+            left: 0
+            bottom: -1px
+    &__title
+        text-align: center
+    &-wrapper
+        display: flex
+        align-items: flex-start
+        justify-content: center
+        margin-right: -90px
+    &__items
+        margin-top: 50px
+        display: flex
+        align-items: flex-start
+    &__item
+        margin-right: 90px
+    &__little-title
+        font-weight: normal
+        font-size: 24px
+        line-height: 50px
+    &__item
+        display: flex
+        align-items: flex-start
+    &__format
+        font-size: 20px
+        line-height: 24px
+        font-weight: 400
+    &__info-wrapper
+        margin-left: 23px
+        display: flex
+        flex-direction: column
+        align-items: start
+    &__description
+        font-weight: 300
+        font-size: 16px
+        line-height: 24px
+    &__parameters-wrapper
+        margin-top: 10px
+    &__parameter-wrapper
+        display: flex
+        width: 130px
+        justify-content: space-between
+        margin-top: 6px
+    &__step
+        margin-top: 45px
+        display: flex
+        position: relative
+        align-items: center
+        justify-content: center
+        & .arrow-wrapper
+            position: relative
+            top: 0
+            right: 0
+    &__number
+        font-size: 24px
+        line-height: 30px
+        font-family: 'Century Gothic B'
+        margin-right: 20px
+    &__border-arrow
+        width: 40px
+        height: 40px
+    &__arrow
+        width: 14px
+        height: 13px
+        left: 10px
+        top: 14px

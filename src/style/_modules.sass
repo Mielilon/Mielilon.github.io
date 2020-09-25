@@ -11,8 +11,25 @@
     line-height: 23px
 .subtitle
     font-weight: 300
-    font-size: 18px
-    line-height: 18px
+    font-size: 20px
+    line-height: 22px
+.note
+    font-weight: normal
+    font-size: 14px
+    line-height: 50px
+    color: #616161
+    &::before
+        position: absolute
+        content: ''
+        width: 6px
+        height: 5px
+        transform: rotate(-30deg) skew(30deg) 
+        display: block
+        margin-left: 16px
+        z-index: 2
+        border: 2px solid #616161
+        border-top: none
+        border-left: none
 
 //buttons
 .white-button
@@ -24,6 +41,7 @@
     border-radius: 10px
     font-size: 16px
     display: inline-block
+    cursor: pointer
 
 .transparent-button
     background-color: transparent
@@ -33,6 +51,7 @@
     font-size: 16px
     width: 175px
     text-align: center
+    cursor: pointer
     transition: .3s
     &:hover, &:active
         background: rgba(255, 255, 255, 0.05)

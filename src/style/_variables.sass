@@ -1,13 +1,19 @@
 // Variables and mixins
 
-$small: 576px
-$medium: 768px
-$large: 992px
-$xlarge: 1200px
-$xxlarge: 1400px
+$xsmall: 560px
+$small: 700px
+$medium: 900px
+$large: 1000px
+$xlarge: 1220px
+$xxlarge: 1600px
+$xxxlarge: 1800px
 
 @mixin respond-to($media)
-  @if $media == sm
+  @if $media == xs
+    @media only screen and (max-width: $xsmall - 1)
+      @content
+
+  @else if $media == sm
     @media only screen and (max-width: $small - 1)
       @content
 
@@ -25,6 +31,10 @@ $xxlarge: 1400px
 
   @else if $media == xxl
     @media only screen and (max-width: $xxlarge - 1)
+      @content
+      
+  @else if $media == xxxl
+    @media only screen and (max-width: $xxxlarge - 1)
       @content
 
 

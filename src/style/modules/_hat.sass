@@ -1,6 +1,6 @@
 
 .hat
-    height: calc(100vh - 70px)
+    height: 100vh
     color: $white
     @include background-image('./../img/backgrounds/main.png')
     & .content
@@ -27,3 +27,11 @@
 .authors
     &__title
         max-width: 680px
+
+.hat.publishing-houses
+    background-image: url('./../img/backgrounds/publishing-houses.png')
+.publishing-houses
+    .hat__title
+        max-width: 580px
+    .subtitle
+        line-height: 26px

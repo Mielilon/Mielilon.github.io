@@ -12,17 +12,18 @@ section.stages
         flex-direction: column
         align-items: flex-start
         margin-top: 130px
-    
     &__items-wrapper
         display: flex
         flex-direction: column
-        max-width: 625px
         align-items: start
-    .stages__button-wrapper
+        span
+            width: 625px
+    &__items-wrapper-2
+        span 
+            width: 550px
+    &__button-wrapper
         display: flex
         flex-direction: column
-        width: 625px
-        max-width: 625px
         align-items: center
     &__button
         padding: 14px 50px
@@ -35,6 +36,7 @@ section.stages
         padding: 23px 35px 23px 85px
         height: 100px
         position: relative
+        width: 625px
         &::before
                 content: ''
                 position: absolute
@@ -63,3 +65,7 @@ section.stages
             content: '3'
         &-4::before
             content: '4'
+        &-5::before
+            content: '5'
+        &-6::before
+            content: '6'

@@ -1,0 +1,65 @@
+.preparation
+    @include background-image('./../img/backgrounds/preparation.png')
+    color: $white
+    padding: 144px 0 100px
+    .content
+        display: flex
+        align-content: space-between
+        justify-content: start
+    &__title
+        margin: 0
+    &__info-wrapper
+        display: flex
+        flex-direction: column
+        justify-content: start
+        align-items: center
+    &__items-wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__button
+        margin-top: 45px
+    &__item
+        display: flex
+        align-items: center
+        width: 690px
+        height: 150px
+        background: linear-gradient(180deg, #202020 0%, #242424 100%)
+        padding: 36px
+        margin-bottom: 15px
+        border-bottom-left-radius: 10px
+        border-bottom-right-radius: 10px
+        &:hover
+            background: $white
+            color: $black
+            width: 720px
+            margin-left: -15px
+            margin-right: -15px
+            .preparation__description
+                font-size: 20px
+                line-height: 30px
+                padding-left: 30px
+                &::before
+                    content: ''
+                    position: absolute
+                    font-weight: bold
+                    font-size: 144px
+                    left: -50px
+                    top: 0
+                &-1
+                    &::before
+                        content: '1'
+                        top: -10px
+                &-2
+                    &::before
+                        content: '2'
+                        top: -20px
+                &-3
+                    &::before
+                        content: '3'
+    &__description
+        font-weight: 300
+        font-size: 16px
+        line-height: 30px
+        cursor: default
+        position: relative

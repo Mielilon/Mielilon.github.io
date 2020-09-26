@@ -3,11 +3,8 @@
     display: flex
     align-items: center
     & .content
-        background-image: url('./../img/backgrounds/success.png')
+        @include background-image('./../img/backgrounds/success.png')
         height: 1000px
-        background-repeat: no-repeat
-        background-position: center
-        background-size: cover
         position: relative
     &__title
         text-align: center

@@ -1,11 +1,8 @@
 
 .hat
-    background-image: url('./../img/backgrounds/main.png')
-    background-repeat: no-repeat
-    background-position: center
-    background-size: cover
     height: calc(100vh - 70px)
     color: $white
+    @include background-image('./../img/backgrounds/main.png')
     & .content
         display: flex
         flex-direction: column
@@ -24,3 +21,9 @@
         flex-direction: column
         align-items: flex-start
         justify-content: center
+
+.hat.authors
+    background-image: url('./../img/backgrounds/authors.png') 
+.authors
+    &__title
+        max-width: 680px

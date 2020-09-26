@@ -1,0 +1,65 @@
+section.stages
+    background-image: url('./../img/backgrounds/stages.png') 
+    height: 1025px
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+.stages
+    &__title
+        text-align: center
+    &__info-wrapper
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        margin-top: 130px
+    
+    &__items-wrapper
+        display: flex
+        flex-direction: column
+        max-width: 625px
+        align-items: start
+    .stages__button-wrapper
+        display: flex
+        flex-direction: column
+        width: 625px
+        max-width: 625px
+        align-items: center
+    &__button
+        padding: 14px 50px
+        text-align: center
+        margin-top: 60px
+    &__item
+        font-weight: 300
+        font-size: 20px
+        line-height: 30px
+        padding: 23px 35px 23px 85px
+        height: 100px
+        position: relative
+        &::before
+                content: ''
+                position: absolute
+                font-style: normal
+                font-weight: bold
+                font-size: 100px
+                line-height: 30px
+        &:nth-child(2n)
+            background-color: #525252
+            color: $white
+            &::before
+                left: -15px
+                top: 15px
+                color: #F3F3F5
+        &:nth-child(2n+1)
+            margin-top: 15px
+            &::before
+                color: #DFDFDF
+                left: -15px
+                
+        &-1::before
+            content: '1' 
+        &-2::before
+            content: '2'
+        &-3::before
+            content: '3'
+        &-4::before
+            content: '4'

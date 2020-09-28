@@ -11,13 +11,33 @@
         font-weight: 300
     &__list
         list-style-type: none
+        border-left: 1px dashed #000000
+        margin-left: 30px
+        padding: 0
+        padding-left: 20px
+
         &-item
-            margin-left: 30px
+            margin-left: 0
             margin-top: 40px
             font-weight: 300
+            position: relative
+            &::after
+                content: ''
+                width: 5px
+                height: 5px
+                border: 2px dashed $black
+                border-radius: 50%
+                position: absolute
+                left: -25px
+                top: 4px
             &::before
                 content: ''
-                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='5' height='5' viewBox='0 0 5 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='2.5' cy='2.5' r='2.1' stroke='%23232323' stroke-width='0.8' stroke-dasharray='2 2'/%3e%3c/svg%3e ")
-                width: 10px
-                height: 10px
+                width: 40px
+                height: 40px
                 border-radius: 50%
+                position: absolute
+                background-color: #F6F6F6
+                left: -40px
+                top: -12px
+
+            

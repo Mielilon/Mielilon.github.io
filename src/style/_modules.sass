@@ -190,7 +190,7 @@
     &::placeholder
         color: $black
 
-// иконки
+//icons
 .social
     width: 30px
     height: 30px
@@ -204,11 +204,100 @@
 .instagram
     background-image: url('./../img/social/social-4.png')
 
-// карта
+//map
 iframe.map
     border-top: none
 
-//отступы
+//margin
 .m-t-10
     margin-top: 10px
 
+
+//stats-circle
+.stats-circle
+    position: relative
+    &__img-wrapper
+        position: absolute
+        top: 50px
+        left: 20px
+    &__img
+        max-width: 700px
+    &__item
+        position: absolute
+        cursor: default
+        text-align: center
+        &:hover
+            .stats-circle__description, .stats-circle__number
+                color: $white
+                transition: .3s
+            .stats-circle__dot
+                &::before, &::after
+                    opacity: 1
+                    transition: .3s
+                    
+        &-1
+            top: 14px
+            left: -34px
+            .stats-circle__dot
+                right: -55px
+                top: 50px
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='19' height='19' viewbox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='9.5' cy='9.5' r='9.5' fill='%231F1F1F'%3e%3c/circle%3e%3c/svg%3e")
+        &-2
+            top: 156px
+            left: -197px
+            .stats-circle__dot
+                right: -55px
+                top: 50px
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='19' height='19' viewbox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='9.5' cy='9.5' r='9.5' fill='%231C1C1C'%3e%3c/circle%3e%3c/svg%3e")
+        &-3
+            top: 355px
+            left: -156px
+            .stats-circle__dot
+                right: -48px
+                top: 30px
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='19' height='19' viewbox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='9.5' cy='9.5' r='9.5' fill='%23191919'%3e%3c/circle%3e%3c/svg%3e")
+        &-4
+            top: 520px
+            left: -80px
+            .stats-circle__dot
+                right: -36px
+                top: 12px
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='19' height='19' viewbox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='9.5' cy='9.5' r='9.5' fill='%23151515'%3e%3c/circle%3e%3c/svg%3e")
+    &__number
+        font-family: 'Century Gothic B'
+        font-style: normal
+        font-size: 45px
+        color: #3D3D3D
+        transition: .3s
+    &__description
+        font-weight: 300
+        font-size: 16px
+        line-height: 20px
+        margin-top: 0
+        color: #3D3D3D
+        text-align: center
+        transition: .3s
+    &__dot
+        position: absolute
+        width: 19px
+        height: 19px
+        display: flex
+        align-items: center
+        justify-content: center
+        &::after
+            content: ''
+            width: 11px
+            height: 11px
+            position: absolute
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='5.50026' cy='5.50001' r='4.86842' fill='%2328AB57'/%3e%3c/svg%3e ")
+            opacity: 0
+            transition: .3s
+        &::before
+            content: ''
+            width: 37px
+            height: 37px
+            position: absolute
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='37' height='37' viewBox='0 0 37 37' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='18.5' cy='18.5' r='18' fill='%23191919' stroke='white' stroke-dasharray='2 2'/%3e%3c/svg%3e")
+            opacity: 0
+            transition: .3s
+        

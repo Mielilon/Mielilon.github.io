@@ -3,10 +3,10 @@
     height: 100vh
     color: $white
     @include background-image('./../img/backgrounds/main.png')
-    & .content
+    .content
         display: flex
-        flex-direction: column
-        align-items: flex-start
+        align-items: center
+        justify-content: space-between
     &__title
         max-width: 430px
     &__button
@@ -41,3 +41,8 @@
     .subtitle
         line-height: 26px
         max-width: 420px
+
+    
+.hat.services
+    margin-top: 0
+    background: linear-gradient(180deg, #242424 0%, #0F0F0F 100%)

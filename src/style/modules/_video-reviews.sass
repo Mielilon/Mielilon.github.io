@@ -1,0 +1,72 @@
+.video-reviews
+    color: $white
+    .content
+        background: linear-gradient(180deg, #232323 0%, #101010 100%)
+        padding: 60px 60px 80px
+        overflow: hidden
+        position: relative
+    &__title
+        text-align: center
+        margin-top: 0
+    &__items-wrapper
+        display: flex
+    &__arrow
+        top: 50%
+    &__item-wrapper
+        margin-left: 20px
+        border-radius: 10px
+        cursor: pointer
+        transition: .3s
+        position: relative
+        border: none
+        padding: 0
+        background-color: transparent
+        outline: none
+        &::before
+            content: ''
+            position: absolute
+            width: 0
+            height: 0
+            border-left: 30px solid $white
+            border-top: 15px solid transparent
+            border-bottom: 15px solid transparent
+            top: 0
+            left: 0
+            bottom: 0
+            right: 0
+            margin: auto
+            opacity: 0
+            transition: .3s
+        &:last-child
+            opacity: 0.2
+    &__item
+        width: 210px
+        height: 210px
+    &__items-wrapper:hover &__item-wrapper:not(:last-child)
+        opacity: 0.4
+        filter: grayscale(70) 
+        transition: .3s
+    &__item-wrapper:hover:not(:last-child)
+        opacity: 1 !important
+        filter: grayscale(0)  !important
+        transition: .3s
+        &::before
+            opacity: 1
+            transition: .3s
+    &__item-wrapper.video-reviews_active
+        opacity: 1 !important
+        filter: grayscale(0)  !important
+        transition: .3s
+        &::before
+            opacity: 1
+            transition: .3s
+            width: 10px
+            height: 30px
+            border-left: 8px solid $white
+            border-right: 8px solid $white
+            border-top: none
+            border-bottom: none
+    &__full-video .video__poster
+        @include background-image('./../img/video/video-reviews-1-full.png')
+    &__full-video .video__player-wrapper
+        height: 800px

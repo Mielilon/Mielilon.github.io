@@ -1,0 +1,56 @@
+.reading
+    color: $white
+    &__black-bar
+        background-color: #111111
+        padding: 50px
+    &__title
+        text-align: center
+        margin: 0
+    &__img-wrapper
+        width: 100%
+        height: 900px
+        padding-top: 190px
+        padding-left: 110px
+        position: relative
+        &:hover
+            .reading__img-2
+                opacity: 1
+                transition: 1s ease-out
+            .reading__img-3
+                opacity: 1
+                transition: 1.5s ease-in
+                transition-delay: .9s
+    &__img-1
+        opacity: 1
+        
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 900px
+        @include background-image('./../img/reading/reading-1.png') 
+    &__img-2
+        @include background-image('./../img/reading/reading-2.png') 
+    &__img-3
+        @include background-image('./../img/reading/reading-3.png') 
+    &__img-2, &__img-3
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 900px
+        opacity: 0
+        transition: 1s ease-out
+    &__description
+        font-weight: 300
+        font-size: 30px
+        line-height: 36px
+    &__button
+        margin-top: 70px
+        &:hover
+            background-color: $black
+            color: $white
+            opacity: .8
+    &__info-wrapper
+        position: absolute
+        z-index: 30

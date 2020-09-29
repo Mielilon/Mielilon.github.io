@@ -1,0 +1,33 @@
+.demands
+    .content
+        color: $white
+        @include background-image('./../img/backgrounds/demands.png') 
+        width: calc( 100% + 89px ) 
+        height: 1000px
+        margin-left: -89px
+        padding-left: 89px
+    &__title
+        text-align: center
+    &__subtitle
+        max-width: 550px
+        text-align: center
+        margin: auto
+        line-height: 30px
+    &__items-wrapper
+        width: calc( 100% - 170px ) 
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        margin-top: 75px
+    &__item
+        font-style: normal
+        font-weight: 300
+        font-size: 20px
+        line-height: 62px
+        padding-left: 100px
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+        width: 600px
+        

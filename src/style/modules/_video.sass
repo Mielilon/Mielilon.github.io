@@ -1,0 +1,83 @@
+.video
+    &__black-bar
+        display: flex 
+        align-items: center
+        justify-content: center
+        background-color: #232323
+        color: $white
+        padding: 15px 0
+    &__player-description
+        font-weight: 300
+        font-size: 16px
+        line-height: 24px
+        margin-left: 14px
+    &__player-wrapper
+        width: 100%
+        margin: 0 auto
+        position: relative
+        background-color: $black
+        height: 600px
+    &__wrapper_active &__poster 
+        opacity: 0
+        height: 0
+        transition-delay: 0s, .8s
+    &__iframe 
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: transparent
+    &__poster 
+        position: absolute
+        top: 0px
+        left: 0px
+        width: 100%
+        height: 100%
+        @include background-image('./../img/video/company-video.png') 
+        border: none
+        overflow: hidden
+        opacity: 1
+        transition: opacity .8s, height 0s
+        transition-delay: 0s, 0s
+        &:hover 
+            cursor: pointer
+        &:before 
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            width: 120px
+            height: 120px
+            margin: auto
+            background-color: #ffffff
+            border-radius: 100%
+            transition: .3s
+            opacity: 0.7
+        &:after 
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            margin: auto
+            width: 0
+            height: 0
+            margin-left: 49%
+            border-left: 40px solid $black
+            border-top: 25px solid transparent
+            border-bottom: 25px solid transparent
+            transition: border-color .3s
+        &:hover:before, &:focus:before 
+            background-color: #666666
+            opacity: 1
+        &:hover:after, &:focus:after 
+
+	
+
+

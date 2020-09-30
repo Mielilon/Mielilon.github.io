@@ -1,4 +1,6 @@
 //= jquery.min.js
+'use strict';
+
 
 //код для оформления видео
 $(document).on('click','.js-videoPoster',function(e) {

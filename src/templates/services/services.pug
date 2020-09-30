@@ -4,9 +4,26 @@ section.services
             .services__info-wrapper
                 ul.services__groups
                     li
-                        a(href="#").services__item Книги и журналы
+                        a(href="#").services__item.services__item_active Книги и журналы
+                        ul.services__subparagraphs.active
+                            li
+                                a(href="#").services__subparagraphs_item Дизайн обложки
+                            li
+                                a(href="#").services__subparagraphs_item Набор текста
+                            li
+                                a(href="#").services__subparagraphs_item Верстка
+                            li
+                                a(href="#").services__subparagraphs_item Корректура
+                            li
+                                a(href="#").services__subparagraphs_item Редактура
+                            li
+                                a(href="#").services__subparagraphs_item Присвоение ISBN
+                            li
+                                a(href="#").services__subparagraphs_item Присвоение УДК, ББК, Авторский знак
+                            li
+                                a(href="#").services__subparagraphs_item Формирование штрихкода
                     li
-                        a(href="#").services__item.services__item_active Допечатная подготовка
+                        a(href="#").services__item Допечатная подготовка
                     li
                         a(href="#").services__item Постпечатная обработка
                     li
@@ -17,33 +34,31 @@ section.services
                         a(href="#").services__item Цифровая печать
                     li
                         a(href="#").services__item Прочие услуги
-                    li
-                        a(href="#").services__item.all-services Все услуги
-                .services__catalogue
-                    a(href="#").services__card.card
+                .services__catalogue.services__catalogue_active
+                    a(href="./service.html").services__card.card
                         img.card__img(src="./img/img-services/book-1.png", alt="")
                         p.card__description Печать книг
-                    a(href="#").services__card.card
+                    a(href="./service.html").services__card.card
                         img.card__img(src="./img/img-services/book-2.png", alt="")
                         p.card__description Печать журналов
-                    a(href="#").services__card.card
+                    a(href="./service.html").services__card.card
                         img.card__img(src="./img/img-services/book-3.png", alt="")
                         p.card__description Печать каталогов
-                    a(href="#").services__card.card
+                    a(href="./service.html").services__card.card
                         img.card__img(src="./img/img-services/book-4.png", alt="")
                         p.card__description Печать брошюр
 
 
-                .services__catalogue.services__catalogue_active
-                    a(href="#").services__card.card
+                .services__catalogue
+                    a(href="./service.html").services__card.card
                         img.card__img(src="./img/img-services/preparation-1.png", alt="")
                         p.card__description Дизайн обложки
-                    a(href="#").services__card.card
+                    a(href="./service.html").services__card.card
                         img.card__img(src="./img/img-services/preparation-2.png", alt="")
                         p.card__description Набор текста
-                    a(href="#").services__card.card
+                    a(href="./service.html").services__card.card
                         img.card__img(src="./img/img-services/preparation-3.png", alt="")
                         p.card__description Верстка
-                    a(href="#").services__card.card
+                    a(href="./service.html").services__card.card
                         img.card__img(src="./img/img-services/preparation-4.png", alt="")
                         p.card__description Корректура

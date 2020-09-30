@@ -1,0 +1,65 @@
+section.brochure-type
+    display: flex
+    width: 100%
+    margin-top: 10px
+.brochure-type    
+    &__item
+        @include background-image('./../img/backgrounds/service/ brochure-type-1.png')
+        width: 50%
+        color: $white
+        height: 500px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        transition: .3s
+        &:hover
+            background-image: url('./../img/backgrounds/service/ brochure-type-1-2.png')
+            transition: .3s
+            .brochure-type__info-wrapper
+                margin-right: 300px
+                transition: .3s
+        &-2
+            background-image: url('./../img/backgrounds/service/ brochure-type-2.png')
+            color: $black
+            transition: .3s
+            &:hover
+                background-image: url('./../img/backgrounds/service/ brochure-type-2-2.png')
+                transition: .3s
+                .brochure-type__info-wrapper-2
+                    margin-left: 300px
+                    transition: .3s
+    &__info-wrapper
+        transition: .3s
+        &-2
+            transition: .3s
+    &__title
+        max-width: 260px
+    &__list
+        list-style-type: none
+        padding: 30px 0 0
+        margin: 0
+        &-item
+            font-weight: 300
+            font-size: 16px
+            line-height: 30px
+            position: relative
+            padding-left: 15px
+            &::before
+                content: ''
+                @include background-image('./../img/icons/list-white.svg')
+                width: 7px
+                height: 7px
+                position: absolute
+                left: 0
+                top: 0
+                bottom: 0
+                margin: auto
+    &__black-button, &__white-button
+        border-radius: 10px
+        padding: 14px 18px
+        margin-top: 34px
+    &__black-button
+        border-color: $black 
+    &__white-button
+        border-color: $white

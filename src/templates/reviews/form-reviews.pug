@@ -2,7 +2,7 @@ section.form-reviews
     .container
         .content(id='form-reviews')
             h1.form-reviews__title Оставить отзыв
-            form.form-reviews__form(action="")
+            form.form-reviews__form.form(action="")
                 .form-reviews__star-rating
                     .form-reviews__star
                         svg(width="38" height="35" viewBox="0 0 38 35" fill="none" xmlns="http://www.w3.org/2000/svg")
@@ -28,20 +28,22 @@ section.form-reviews
                     .form-reviews__recommendation-wrapper
                         input.form-reviews__recommendation_checkbox(type="checkbox" name="recommendation" id='no' value='no') 
                         label.form-reviews__recommendation_label(for="no") Нет
-                .form-reviews__inputs-wrapper
-                    .form-reviews__input-wrapper
-                        label.form-reviews__label(for="review-name") Имя
-                        input#review-name.form-reviews__input(type="text" required placeholder='Введите ваше имя')
-                        label.form-reviews__label.m-t-15(for="review-email") E-mail
-                        input#review-email.form-reviews__input(type="email" required placeholder='Введите ваш e-mail')
-                    .form-reviews__input-wrapper
-                        label.form-reviews__label(for="review-email") Текст отзыва
-                        textarea#review.form-reviews__input.form-reviews__textarea(name="review" required placeholder='Введите ваш отзыв')
-                    .form-reviews__input-wrapper
-                        label.form-reviews__label(for="upload-file") Добавить видео
+
+
+                .form__inputs-wrapper
+                    .form__input-wrapper
+                        label.form__label(for="review-name") Имя
+                        input#review-name.form__input(type="text" required placeholder='Введите ваше имя')
+                        label.form__label.m-t-15(for="review-email") E-mail
+                        input#review-email.form__input(type="email" required placeholder='Введите ваш e-mail')
+                    .form__input-wrapper
+                        label.form__label(for="review-email") Текст отзыва
+                        textarea#review.form__input.form-reviews__textarea(name="review" required placeholder='Введите ваш отзыв')
+                    .form__input-wrapper
+                        label.form__label(for="upload-file") Добавить видео
                         input#upload-file(type="file" name="file" accept="video/mp4,video/x-m4v,video/*")
-                        span.form-reviews__input.form-reviews__file
-                            img.form-reviews__img(src="./img/icons/file.svg", alt="")
+                        span.form__input.form__file
+                            img.form__img(src="./img/icons/file.svg", alt="")
                             |Перетащите файл
-                .form-reviews__button-wrapper
-                    button.black-button.form-reviews__button(type='submit') Оставить отзыв
+                .form__button-wrapper
+                    button.black-button.form__button(type='submit') Оставить отзыв

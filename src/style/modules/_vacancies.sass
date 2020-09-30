@@ -1,0 +1,48 @@
+section.vacancies
+    .content
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+    
+.vacancies
+    &__title
+        margin-bottom: 70px
+    &__items-wrapper
+        width: 80%
+    &__little-title
+        font-weight: 300
+        font-size: 20px
+        line-height: 23px
+        padding-bottom: 25px
+        border-bottom: 1px dashed #979797
+        padding-left: 30px
+        margin-bottom: 0
+        margin-top: 25px
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            width: 15px
+            border-bottom: 2px solid black
+            right: 30px
+            top: 11px
+        &::after
+            content: ''
+            position: absolute
+            height: 15px
+            border-left: 2px solid black
+            right: 36px
+            top: 5px
+            opacity: 1
+        &_active::after
+            opacity: 0
+    &__description
+        font-weight: 300
+        font-size: 16px
+        line-height: 30px
+    &__info-wrapper
+        padding: 30px
+        padding-top: 20px
+        background-color: #F2F2F2
+        display: none

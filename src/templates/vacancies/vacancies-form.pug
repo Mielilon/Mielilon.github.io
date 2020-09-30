@@ -1,0 +1,34 @@
+section.vacancies-form
+    .container
+        .content
+            h1.vacancies-form__title Оставить заявку
+            form.form__form(enctype="multipart/form-data" method="post")
+                .vacancies-form__inputs-wrapper
+                    .form__input-wrapper
+                        label.form__label(for="vacancies-name") ФИО
+                        input#vacancies-name.form__input(type="text" required placeholder='Введите ваше ФИО')
+                        label.form__label.m-t-15(for="vacancies-email") E-mail
+                        input#vacancies-email.form__input(type="email" required placeholder='Введите ваш e-mail')
+                    .form__input-wrapper
+                        label.form__label(for="vacancies") Вакансия
+                        select#vacancies.form__input.form__input-select(type="text" required)
+                            option Вакансия 1
+                            option Вакансия 2
+                            option Вакансия 3
+                            option Вакансия 4
+                            option Вакансия 5
+                        label.form__label.m-t-15(for="vacancies-tel") Телефон
+                        input#vacancies-tel.form__input(type="tel" required placeholder='Введите ваш телефон')
+                    .form__input-wrapper
+                        label.form__label(for="vacancies-file") Прикрепить резюме 
+                            a.vacancies-form__link(href="") (Правила составления резюме)
+                        input#vacancies-file.vacancies-form__file(type="file" name="file" multiple)
+                        span.form__input.form__file.form__file-label
+                            img.form__img(src="./img/icons/file.svg", alt="")
+                            |Перетащите файл
+                .vacancies-form__inputs-wrapper
+                    .form__checkbox-wrapper
+                        input.checkbox.form__checkbox(type="checkbox" id="vacancies-form-checkbox" name="form-checkbox" value="form-checkbox" required)
+                        label.label.form__checkbox-label(for="vacancies-form-checkbox") С политикой конфеденциальности ознакомлен. Согласен на обработку данных 
+                    .form__button-wrapper.vacancies-form__button-wrapper
+                        button.black-button.form__button(type='submit') Оставить заявку

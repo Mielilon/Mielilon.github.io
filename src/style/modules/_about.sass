@@ -96,4 +96,34 @@
         font-weight: 300
         font-size: 16px
         line-height: 24px
-            
+
+
+@include respond-to(md)
+    .about
+        &__sidebar
+            display: grid
+            grid-template-rows: 1fr
+            grid-template-columns: repeat(4, 310px)
+            grid-gap: 30px
+            width: 500px
+            margin-bottom: 20px
+            margin-top: 40px
+            overflow-x: scroll
+            align-self: center;
+            justify-self: center
+        &-wrapper
+            flex-direction: column
+        &__statistics
+            height: 150px
+        &__video
+            &:before 
+                top: 2px
+                left: 12px
+            &:after 
+                top: 12px
+                left: 28px
+
+
+.container
+    overflow: hidden
+    

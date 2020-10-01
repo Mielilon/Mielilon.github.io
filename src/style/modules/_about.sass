@@ -6,26 +6,47 @@
         background-color: #08090B
         padding-top: 80px
     &-wrapper
-        display: flex
+        display: none
         align-items: flex-start
+        &_active
+            display: flex
     &__title
         text-align: center
+        color: #666666
+        &_active
+            color: $white
     &__video
         display: inline-block
         padding-left: 84px
         position: relative
+        cursor: pointer
         color: #666666
-        &::before
+        &:before 
             content: ''
-            background: url('./../img/icons/play.svg')
-            background-repeat: no-repeat
-            background-position: center
-            background-size: cover
             position: absolute
             width: 48px
             height: 48px
             top: 16px
             left: 8px
+            background-color: #666666
+            border-radius: 100%
+            transition: .3s
+        &:after 
+            content: ''
+            position: absolute
+            top: 25px
+            left: 24px
+            margin: auto
+            width: 0
+            height: 0
+            border-left: 23px solid $black
+            border-top: 15px solid transparent
+            border-bottom: 15px solid transparent
+            transition: border-color .3s
+    &__video.about__title_active
+        color: #ffffff
+        &:before 
+            background-color: #ffffff
     &__sidebar
         display: flex
         flex-direction: column

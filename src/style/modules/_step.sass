@@ -1,8 +1,8 @@
 section.step
     margin-top: 104px
+    height: 800px
 
 .step
-    padding-bottom: 70px
     & .content
         display: flex
         flex-direction: column
@@ -18,6 +18,19 @@ section.step
         margin-top: 81px
         display: flex
         align-items: flex-start
+    &__title-wrapper
+        display: flex
+        align-items: center
+    &__little-title
+        font-size: 20px
+        line-height: 50px
+    &__info
+        font-weight: 300
+        font-size: 14px
+        line-height: 20px
+        opacity: 0
+        transition: .3s
+        height: 0
     &__item
         width: 200px
         margin-right: 20px
@@ -29,13 +42,17 @@ section.step
         align-items: flex-start
         border-bottom-left-radius: 10px
         border-bottom-right-radius: 10px
-    &__title-wrapper
-        display: flex
-        align-items: center
-    &__little-title
-        font-size: 20px
-        line-height: 50px
-    &__info
-        font-weight: 300
-        font-size: 14px
-        line-height: 20px
+        .stroke-green, .fill-green
+            transition: .3s
+        &:hover
+            .stroke-green
+                stroke: $green
+                transition: .3s
+            .fill-green
+                fill: $green
+                transition: .3s
+            .step__info
+                opacity: 1
+                transform: scale(1)
+                transition: .3s
+                height: auto

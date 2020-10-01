@@ -3,6 +3,9 @@
     margin-bottom: 100px
     &__catalogue
         grid-template-columns: 1fr 1fr
+        grid-template-rows: auto
+        height: 675px
+        overflow-y: scroll
         grid-gap: 25px
         margin-left: 25px
         display: none
@@ -61,7 +64,7 @@
 .card
     position: relative
     &__img
-        max-width: 400px
+        max-width: 380px
     &__description
         font-family: 'Century Gothic'
         font-weight: normal
@@ -70,3 +73,71 @@
         position: absolute
         top: 0
         left: 50px
+
+
+@include respond-to(xxl)
+    .services
+        &__item
+            width: 270px
+        &__info-wrapper
+            justify-content: start
+    .all-services
+        width: 110px
+@include respond-to(xl)
+    .services
+        &__catalogue
+            height: 510px
+        &__groups
+            height: 510px
+    .card
+        position: relative
+        &__img
+            max-width: 100%
+@include respond-to(md)
+    .services
+        &__catalogue
+            grid-template-columns: 1fr
+@include respond-to(sm)
+    .card
+        &__description
+            font-size: 18px
+            line-height: 30px
+            left: 30px
+@include respond-to(xs)
+    .services
+        &__info-wrapper
+            flex-direction: column
+            align-items: center
+            width: 100%
+        &__catalogue
+            margin-left: 0
+        &__groups
+            display: flex
+            max-width: 400px
+            height: auto
+            overflow-x: scroll
+            border-right: none
+            margin-bottom: 30px
+        &__item
+            width: auto
+            white-space: nowrap
+            margin-right: 24px
+            &_active
+                color: $green
+                position: relative
+                &::before
+                    display: none
+    .all-services
+        margin-top: 0
+        border-top: none
+        border-left: 1px solid $black
+        width: auto
+        padding-left: 20px
+
+@media screen and ( max-width: 460px )
+    .services
+        &__groups
+            display: flex
+            max-width: 280px
+    
+

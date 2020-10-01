@@ -31,11 +31,11 @@ a
   @include respond-to(lg)
     grid-template-columns: auto [p-start] 50px [c-start] auto [c-end] 50px [p-end] auto
   @include respond-to(md)
-    grid-template-columns: auto [p-start] 20px [c-start] auto [c-end] 20px [p-end] auto
+    grid-template-columns: auto [p-start] 30px [c-start] auto [c-end] 30px [p-end] auto
   @include respond-to(sm)
-    grid-template-columns: [p-start] 20px [c-start] auto [c-end] 20px [p-end]
+    grid-template-columns: [p-start] 30px [c-start] auto [c-end] 30px [p-end]
   @include respond-to(xs)
-    grid-template-columns: [p-start] 15px [c-start] auto [c-end] 15px [p-end]
+    grid-template-columns: [p-start] 10px [c-start] auto [c-end] 10px [p-end]
   &>.content 
     grid-column: c-start/c-end
 
@@ -68,3 +68,14 @@ a
 
 section
   margin-top: 60px
+
+@include respond-to(md)
+  h1
+    font-size: 2.6rem
+    margin: 20px 0
+  h2
+    font-size: 2rem
+    margin: 15px 0
+  h3
+    font-size: 1.4rem
+    margin: 15px 0

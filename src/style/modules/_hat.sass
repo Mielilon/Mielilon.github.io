@@ -49,6 +49,7 @@
     
 .hat.services, .hat.contacts, .hat.company, .hat.cases-catalogue, .hat.case .header, .hat.equipment-page, .hat.vacancies
     margin-top: 0
+    background-image: none
     background: linear-gradient(180deg, #242424 0%, #0F0F0F 100%)
     
 .hat.contacts, .hat.company, .hat.service
@@ -67,3 +68,43 @@
     background-image: url('./../img/backgrounds/service/brochure.png')
     .hat__title
         max-width: 500px
+
+
+@include respond-to(xl)
+    .hat
+        background-position: left
+@include respond-to(md)
+    .hat
+        background-position: 20%
+        &__title
+            max-width: 430px
+        &__button
+            margin-top: 20px
+        &__buttons-wrapper
+            display: flex
+            flex-direction: column
+            align-items: start
+            margin-top: 30px
+            .hat__button
+                margin-top: 10px
+        &__info
+            height: 50vh
+            justify-content: flex-end
+        &__subtitle
+            max-width: 250px
+            line-height: 26px
+@include respond-to(xs)
+    .hat
+        background: linear-gradient(180deg, #242424 0%, #0F0F0F 100%)
+        &__info
+            height: 50vh
+            align-items: center
+        &__info-wrapper
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 100%
+        &__subtitle
+            text-align: center
+        &__title
+            text-align: center

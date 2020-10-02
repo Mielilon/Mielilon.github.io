@@ -7,7 +7,10 @@ footer.footer
     & .content
         display: flex
         align-items: flex-start
-        justify-content: space-between
+    &__info-wrapper   
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        grid-gap: 40px
     &__logo
         margin-bottom: 43px
     &__contacts
@@ -29,3 +32,31 @@ footer.footer
         font-size: 12px
         line-height: 24px
             
+
+@include respond-to(xl)
+    .footer
+        &__info-wrapper 
+            grid-template-rows: 1fr 1fr
+            grid-template-columns: 1fr 1fr
+            grid-column-gap: 30px
+            grid-row-gap: 0
+        &__column:nth-child(2)
+            grid-column: 1
+            grid-row: 2
+@include respond-to(sm)
+    footer.footer
+        padding: 60px 20px 50px
+    
+    .footer
+        &__info-wrapper 
+            grid-template-columns: 2fr 
+            grid-template-rows:  auto auto auto
+            grid-column-gap: 30px
+            grid-row-gap: 0
+        &__column:nth-child(2)
+            grid-column: 1
+            grid-row: 2
+@include respond-to(xs)
+    .footer
+        & .content
+            flex-direction: column

@@ -2,7 +2,9 @@ section.about
     .container
         .content
             .about-background.tabs-wrapper
-                h1.about__title.tabs-buttons__item.tabs-buttons__item_active(data-tab-button="1") О нас / 
+                h1.about__title.tabs-buttons__item
+                    .tabs-buttons__item(data-tab-button="1")(href="#").tabs-buttons__item_active О нас 
+                    span / 
                     .about__title-video.tabs-buttons__item(data-tab-button="2")(href="#") Видео
                 .about-wrapper.tabs-content.tabs-content_active(data-tab-content="1")
                     .about__sidebar

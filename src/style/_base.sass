@@ -29,13 +29,13 @@ a
   @include respond-to(xl)
     grid-template-columns: auto [p-start] 30px [c-start] 900px [c-end] 30px [p-end] auto
   @include respond-to(lg)
-    grid-template-columns: auto [p-start] 50px [c-start] auto [c-end] 50px [p-end] auto
+    grid-template-columns: auto [p-start] 30px [c-start] auto [c-end] 30px [p-end] auto
   @include respond-to(md)
     grid-template-columns: auto [p-start] 30px [c-start] auto [c-end] 30px [p-end] auto
   @include respond-to(sm)
     grid-template-columns: [p-start] 30px [c-start] auto [c-end] 30px [p-end]
   @include respond-to(xs)
-    grid-template-columns: [p-start] 10px [c-start] auto [c-end] 10px [p-end]
+    grid-template-columns: [p-start] 0 [c-start] auto [c-end] 0 [p-end]
   &>.content 
     grid-column: c-start/c-end
 
@@ -68,6 +68,18 @@ a
 
 section
   margin-top: 60px
+
+
+@include respond-to(lg)
+  h1
+    font-size: 2.8rem
+    margin: 20px 0
+  h2
+    font-size: 2.4rem
+    margin: 15px 0
+  h3
+    font-size: 1.6rem
+    margin: 15px 0
 
 @include respond-to(md)
   h1

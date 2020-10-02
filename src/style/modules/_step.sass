@@ -1,6 +1,7 @@
 section.step
     margin-top: 104px
     height: 800px
+    padding: 20px
 
 .step
     & .content
@@ -15,9 +16,10 @@ section.step
         margin-top: 37px
         line-height: 30px
     &__cards
-        margin-top: 81px
-        display: flex
-        align-items: flex-start
+        margin-top: 80px
+        display: grid
+        grid-template-columns: repeat(6, 200px)
+        grid-gap: 30px
     &__title-wrapper
         display: flex
         align-items: center
@@ -31,9 +33,10 @@ section.step
         opacity: 0
         transition: .3s
         height: 0
+    &__icon
+        svg
+            height: 60px
     &__item
-        width: 200px
-        margin-right: 20px
         background: linear-gradient(180deg, #181818 0%, #232323 100%)
         padding: 25px
         padding-right: 20px
@@ -42,9 +45,11 @@ section.step
         align-items: flex-start
         border-bottom-left-radius: 10px
         border-bottom-right-radius: 10px
+        height: 180px
         .stroke-green, .fill-green
             transition: .3s
         &:hover
+            height: 300px
             .stroke-green
                 stroke: $green
                 transition: .3s
@@ -56,3 +61,12 @@ section.step
                 transform: scale(1)
                 transition: .3s
                 height: auto
+
+
+
+@include respond-to(xxl)
+    .step
+        &__cards
+            overflow-x: scroll
+            overflow-y: hidden
+            width: 90vw

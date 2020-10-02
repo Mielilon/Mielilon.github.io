@@ -33,3 +33,86 @@
             line-height: 50px
             left: -36px
             top: -14px
+
+@include respond-to(xxl)
+    .success
+        &__item
+            max-width: 430px
+@include respond-to(xl)
+    .success
+        .content
+            height: 850px
+        &__item
+            max-width: 350px   
+            &_1
+                left: 60px
+            &_2
+                bottom: 30px
+                right: 50px     
+        
+@include respond-to(lg)
+    .success
+        .content 
+            width: 80vw
+            height: calc( 100vh + 40px ) 
+            background-position: left
+        &__title
+            margin-top: 0
+        &__item
+            max-width: 300px   
+            &_1
+                left: 60px
+                top: 120px
+            &_2
+                bottom: 10px
+                right: 20px     
+        &__description
+            font-size: 14px
+            line-height: 20px
+        &__little-title
+            font-size: 16px 
+            & span
+                font-size: 30px
+                line-height: 40px
+                left: -26px
+                top: -10px
+@include respond-to(md)
+    .success
+        .content 
+            width: calc( 100vw - 60px )
+            height: 100vh
+            @include background-image('./../img/backgrounds/seo-text.png')
+        .arrow-wrapper
+            display: none
+        &__item
+            max-width: 400px   
+            &_1
+                left: 60px
+                top: 120px
+            &_2
+                bottom: 40px
+                right: 20px     
+        &__description
+            font-size: 14px
+            line-height: 20px
+        &__little-title
+            font-size: 16px 
+            & span
+                font-size: 30px
+                line-height: 40px
+                left: -26px
+                top: -10px
+@include respond-to(xs)
+    .success
+        .content 
+            width: 100vw
+            height: 600px
+        &__item
+            max-width: 400px 
+            padding: 10px 
+            &_1
+                left: 35px
+                top: 120px
+            &_2
+                top: 350px
+                left: 35px     

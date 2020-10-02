@@ -1,10 +1,10 @@
 section.about
     .container
         .content
-            .about-background
-                h1.about__title.about__title_active О нас / 
-                    .about__video(href="#") Видео
-                .about-wrapper.about-wrapper_active
+            .about-background.tabs-wrapper
+                h1.about__title.tabs-buttons__item.tabs-buttons__item_active(data-tab-button="1") О нас / 
+                    .about__title-video.tabs-buttons__item(data-tab-button="2")(href="#") Видео
+                .about-wrapper.tabs-content.tabs-content_active(data-tab-content="1")
                     .about__sidebar
                         .about__statistics.statistics
                             h2.statistics__titile 7 462
@@ -25,7 +25,7 @@ section.about
                             p.about__para Цифровые печатные машины OCE и Canon, установленные в нашей типографии способны производить в месяц до 60 000 000 оттисков. Внедрение инновационных технологий позволяет нам быть одной из ведущих компаний на полиграфическом рынке.
                             p.about__para Мы работаем 7 дней в неделю, чтобы Вы получили продукцию в кратчайшие сроки.
                         img.about__img(src="./img/about.png", alt="")
-                .about-wrapper
+                .about-wrapper.tabs-content(data-tab-content="2")
                     .video__player-wrapper.js-videoWrapper
                         iframe.video__iframe.js-videoIframe(src='', frameborder='0', allowtransparency='true', allowfullscreen='', data-src='https://www.youtube.com/embed/2OEL4P1Rz04')
                         button.about__poster.video__poster.js-videoPoster

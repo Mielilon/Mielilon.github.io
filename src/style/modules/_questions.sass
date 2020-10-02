@@ -23,3 +23,45 @@ section.questions
         margin-bottom: 47px
     &__button
         margin-left: 28px
+
+
+@include respond-to(xl)
+    .questions
+        background-position: 30% 10%
+        height: 400px
+        &__subtitle
+            font-size: 24px
+            max-width: 320px
+            margin-top: 30px
+        &__description
+            font-size: 18px
+            margin-top: 10px
+            max-width: 370px
+@include respond-to(md)
+    .questions
+        &__subtitle
+            font-size: 20px
+            max-width: 320px
+            margin-top: 30px
+        &__description
+            font-size: 14px
+            margin-top: 10px
+            max-width: 370px
+        &__number
+            width: 230px
+            font-size: 24px
+            &::placeholder
+                font-size: 24px
+
+@include respond-to(xs)
+    section.questions
+        height: auto
+        background: $white
+        padding: 20px
+        padding-left: 40px
+    .questions
+        &__button
+            margin-left: 0
+            margin-top: 20px
+        &__number
+            width: 200px

@@ -68,3 +68,52 @@
     &__button
         z-index: 3
         margin-top: 40px
+
+
+@include respond-to(xxl)
+    .gratitude
+        &__item
+            height: 700px
+            padding: 50px
+            margin-top: 0
+        &__img
+            left: 110px
+            bottom: -30px
+@include respond-to(xl)
+    .gratitude
+        &__item
+            display: flex
+            flex-direction: column
+            align-items: center
+            background-position: left
+        &__img
+            display: none
+
+@include respond-to(sm)
+    .gratitude
+        &__item
+            height: auto
+        &__arrow
+            top: 34%
+        &__title
+            text-align: center
+@media screen and ( max-width: 470px )
+    .gratitude
+        &__subtitle
+            padding: 0 20px
+        &__arrow
+            display: none
+        &__info-title
+            text-align: center
+        blockquote.gratitude__description
+            font-size: 16px
+            line-height: 26px
+            &::before
+                left: -40px
+            &::after
+                bottom: 20px
+            p
+                font-size: 16px
+                line-height: 50px
+        
+    

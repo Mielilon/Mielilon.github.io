@@ -104,6 +104,13 @@
     right: 3%
     z-index: 5
     cursor: pointer
+@media screen and ( max-width: 1090px )
+    .arrow-wrapper
+        right: 1%
+@include respond-to(lg)
+    .arrow-wrapper
+        right: 4%
+    
 .border-arrow
     border: 2px solid $white
 .border-arrow_black
@@ -429,8 +436,7 @@ iframe.map
 .active
     display: block !important
 
-
-@include respond-to(md)
+@include respond-to(lg)
     .subtitle
         font-size: 16px
         line-height: 22px

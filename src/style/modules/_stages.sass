@@ -72,3 +72,55 @@ section.stages
             content: '5'
         &-6::before
             content: '6'
+
+
+@include respond-to(xl)
+    .stages
+        &__item
+            padding-left: 60px
+            &::before
+                font-size: 90px
+            &:nth-child(2n+1)
+                background-color: rgba(255, 255, 255, 0.7)
+                margin-top: 0
+
+@include respond-to(sm)
+    .stages
+        .content
+            display: flex
+            flex-direction: column
+            align-items: center
+        &__info-wrapper
+            margin-top: 80px
+        &__item
+            height: 130px
+            width: 300px
+        &__items-wrapper
+            span
+                width: 500px
+        &__items-wrapper-2
+            span 
+                width: 450px
+            .stages__item
+                height: 100px
+            
+@include respond-to(xs)
+    .stages.stages-2
+        background-position: 65%
+    .stages
+        .content
+            padding: 0 20px
+        &__item
+            width: 100%
+            font-size: 14px
+            padding: 20px
+            padding-left: 50px
+            &::before
+                font-size: 50px
+                left: 10px !important
+        &__items-wrapper
+            span
+                width: 100%
+        &__items-wrapper-2
+            span 
+                width: 100%

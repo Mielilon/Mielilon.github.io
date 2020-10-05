@@ -84,8 +84,11 @@
 @include respond-to(md)
     .hat
         background-position: 20%
+        .content
+            overflow: hidden
         &__title
             max-width: 430px
+            text-align: center
         &__button
             margin-top: 20px
         &__buttons-wrapper
@@ -97,11 +100,16 @@
                 margin-top: 10px
         &__info
             height: auto
+            align-items: center
         &__info-wrapper
             height: 90vh
             justify-content: center
+            display: flex
+            flex-direction: column
+            align-items: center
         &__subtitle
             max-width: 250px
+            text-align: center
             line-height: 22px !important
         .authors__title
             font-size: 2rem
@@ -115,15 +123,9 @@
 @include respond-to(xs)
     .hat
         background: linear-gradient(180deg, #242424 0%, #0F0F0F 100%) !important
-        .container
-            padding: 0 10px
-        &__info
-            align-items: center
         &__info-wrapper
-            display: flex
-            flex-direction: column
-            align-items: center
             width: 100%
+            align-items: center
         &__subtitle
             text-align: center
         &__title

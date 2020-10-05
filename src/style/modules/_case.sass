@@ -45,3 +45,48 @@
         font-weight: 300
     &__info-item   
         margin-bottom: 20px
+
+@include respond-to(xl)
+    .case
+        &__items-wrapper
+            flex-direction: column
+            align-items: flex-start
+        &__info
+            margin-left: 0
+            margin-top: 30px
+
+@include respond-to(md)
+    .case
+        &__img-wrapper
+            height: 500px
+        &__full-img
+            height: 500px
+            width: 500px
+        &__img
+            width: 80px
+            height: 80px
+@include respond-to(sm)
+    .case
+        &__img-wrapper
+            height: auto
+        &__full-img
+            height: auto
+            width: calc( 100vw - 60px )
+        &__img
+            width: 18%
+            height: auto
+        &__gallery
+            flex-direction: column
+        &__img-wrapper
+            flex-direction: row
+            width: calc( 100vw - 60px )
+            margin-left: 0
+            margin-top: 20px
+@include respond-to(xs)     
+    .case
+        .container
+            padding: 0 20px
+        &__full-img
+            width: calc( 100vw - 40px )
+        &__img-wrapper
+            width: calc( 100vw - 40px )

@@ -267,7 +267,22 @@
     &__button
         padding: 10px 20px
 
+@include respond-to(lg)
+    .form
+        &__inputs-wrapper
+            grid-template-columns: 1fr 
+            grid-template-rows: repeat(3, 1fr)
+        &__input
+            width: 416px
 
+@include respond-to(xs)
+    .form
+        padding: 0 20px
+        &__inputs-wrapper
+            grid-template-columns: 1fr 
+            grid-template-rows: repeat(3, 1fr)
+        &__input
+            width: 100% 
 
 
 

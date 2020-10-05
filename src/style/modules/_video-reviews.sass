@@ -11,7 +11,8 @@
     &__items-wrapper
         display: flex
     &__arrow
-        top: 50%
+        top: 40%
+        left: 30%
     &__item-wrapper
         margin-left: 20px
         border-radius: 10px
@@ -38,7 +39,9 @@
             opacity: 0
             transition: .3s
         &:last-child
-            opacity: 0.2
+            .video-reviews__item
+                opacity: 0.2
+            position: relative
     &__item
         width: 210px
         height: 210px
@@ -68,3 +71,15 @@
             border-bottom: none
     &__full-video .video__player-wrapper
         height: 800px
+
+@include respond-to(xxl)
+    .video-reviews
+        &__items-wrapper
+            overflow: scroll
+        &__arrow
+            top: 40%
+            left: 40%
+@include respond-to(sm)
+    .video-reviews
+        .content
+            padding: 60px 30px 80px 10px

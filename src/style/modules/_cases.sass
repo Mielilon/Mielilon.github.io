@@ -100,3 +100,28 @@ section.cases
             grid-gap: 0
         &__card
             padding: 0 20px
+
+@include respond-to(xxl)
+    .cases-catalogue    
+        &__items-wrapper
+            grid-template-columns: 1fr 1fr 1fr
+    
+@include respond-to(xl)
+    .cases-catalogue    
+        &__items-wrapper
+            grid-template-columns: 1fr 1fr
+        &__img
+            width: 250px
+
+@include respond-to(sm)
+    .cases-catalogue   
+        &__items-wrapper
+            grid-template-columns: 1fr
+        &__img
+            width: 250px
+            margin: 0
+        &__item
+            border-color: $white
+        &__description
+            opacity: 1
+        

@@ -342,7 +342,7 @@ iframe.map
         top: 50px
         left: 20px
     &__img
-        max-width: 700px
+        width: 700px
     &__item
         position: absolute
         cursor: default
@@ -422,6 +422,63 @@ iframe.map
             opacity: 0
             transition: .3s
         
+@include respond-to(xxl)
+    .stats-circle
+        &__img-wrapper
+            top: 20px
+            left: -10px
+            svg
+                height: 350px
+        &__img
+            width: 450px
+        &__number
+            font-size: 28px
+        &__description
+            font-size: 12px
+            line-height: 16px
+        &__dot
+            &::after
+                width: 8px
+                height: 8px
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='8' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='5.50026' cy='5.50001' r='4.86842' fill='%2328AB57'/%3e%3c/svg%3e ")
+            &::before
+                width: 24px
+                height: 24px
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 37 37' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='18.5' cy='18.5' r='18' fill='%23191919' stroke='white' stroke-dasharray='2 2'/%3e%3c/svg%3e")
+        &__item
+            &-1
+                top: -20px
+                left: -40px
+                .stats-circle__dot
+                    right: -45px
+            &-2
+                top: 70px
+                left: -144px
+                .stats-circle__dot
+                    right: -40px
+            &-3
+                top: 210px
+                left: -116px
+                .stats-circle__dot
+                    right: -32px  
+            &-4
+                top: 320px
+                left: -60px
+                .stats-circle__dot
+                    right: -10px
+                    top: 12px
+@include respond-to(md)
+    .stats-circle
+        right: -20%
+        top: 10%
+@include respond-to(sm)
+    .stats-circle
+        right: -15%
+        transform: scale(0.8)
+        top: 10%
+@include respond-to(xs)
+    .stats-circle
+        display: none
 //close
 .close
     position: absolute

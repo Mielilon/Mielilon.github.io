@@ -22,7 +22,6 @@
                 transition-delay: .9s
     &__img-1
         opacity: 1
-        
         position: absolute
         top: 0
         left: 0
@@ -54,3 +53,32 @@
     &__info-wrapper
         position: absolute
         z-index: 30
+
+
+@include respond-to(lg)
+    .reading
+        .content
+            width: calc( 100vw - 60px )
+        &__img-wrapper
+            padding-left: 50px
+            padding-top: 0
+            display: flex
+            flex-direction: column
+            align-items: start
+            justify-content: center
+        &__button
+            margin-top: 30px
+        &__description
+            padding-right: 10px
+@include respond-to(sm)
+    .reading
+        &__img-wrapper
+            height: 600px
+        &__img-1, &__img-2, &__img-3
+            background-position-x: 70%
+            height: 600px
+
+@include respond-to(xs)
+    .reading
+        .content
+            width: 100%

@@ -7,7 +7,6 @@
         display: flex
         justify-content: space-between
         align-items: flex-start
-        margin-top: 40px
     &__subtitle
         line-height: 30px
         text-align: center
@@ -28,3 +27,25 @@
         font-size: 16px
         line-height: 24px
         
+
+@include respond-to(xxl)
+    .team
+        &__item
+            margin: 30px
+        &__items-wrapper
+            width: 100%
+            overflow: scroll
+@include respond-to(lg)
+    .team
+        &__items-wrapper
+            width: calc( 100vw - 60px )
+@include respond-to(sm)
+    .team
+        &__items-wrapper
+            width: calc( 100vw - 20px )
+@include respond-to(xs)
+    .team
+        &__item
+            width: 300px
+        &__img
+            width: 280px

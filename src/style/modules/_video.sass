@@ -83,11 +83,19 @@
 .service-video__poster.video__poster
     @include background-image('./../img/video/video-reviews-1-full.png')
 
+@include respond-to(lg)
+    .video
+        .content
+            width: calc( 100vw - 60px )
 @include respond-to(md)
     .video
         &__poster 
             &:after
                 margin-left: 47%
+@include respond-to(sm)
+    .video
+        .content
+            width: 100%
 @include respond-to(xs)
     .video
         &__poster 

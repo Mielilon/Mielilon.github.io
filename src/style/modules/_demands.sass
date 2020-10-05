@@ -23,11 +23,52 @@
         font-style: normal
         font-weight: 300
         font-size: 20px
-        line-height: 62px
+        line-height: 26px
+        padding: 20px
         padding-left: 100px
         display: flex
         align-items: center
         justify-content: flex-start
+        flex-wrap: wrap
         border-bottom: 1px solid rgba(255, 255, 255, 0.5)
         width: 600px
         
+
+@include respond-to(xxl)
+    .demands
+        .content
+            width: calc( 100% + 62px ) 
+            height: 900px
+            margin-left: -62px
+            padding-left: 62px
+        &__items-wrapper
+            width: calc( 100% - 40px ) 
+
+@include respond-to(xl)
+    .demands
+        .content
+            width: 100%
+            padding-bottom: 40px
+            height: auto
+            margin-left: 0
+            padding-left: 0
+        &__items-wrapper
+            width: calc( 100% - 70px ) 
+@include respond-to(lg)
+    .demands
+        .content
+            width: calc( 100vw - 60px )
+        &__items-wrapper
+            width: 100%
+        &__item
+            background-color: #2929296e
+            margin: 0
+            padding: 20px 30px
+
+@include respond-to(sm)
+    .demands
+        .content
+            padding: 20px
+            width: 100%
+        &__item
+            width: 100%

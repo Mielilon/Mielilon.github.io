@@ -17,3 +17,25 @@
         flex-direction: column
         align-items: center
         cursor: pointer
+
+@include respond-to(xxl)
+    .equipment-cards
+        &__items-wrapper
+            grid-template-columns: 1fr 1fr
+@include respond-to(lg)
+    .equipment-cards
+        &__img
+            width: 400px
+            height: 370px
+@include respond-to(md)
+    .equipment-cards
+        &__items-wrapper
+            grid-template-columns: 1fr
+@include respond-to(xs)
+    .equipment-cards
+        &__items-wrapper
+            grid-template-columns: 100%
+            margin: 0 20px
+        &__img
+            width: 100%
+            height: auto

@@ -32,3 +32,49 @@
         max-width: 500px
         margin-left: 30px
         margin-bottom: 30px
+
+@include respond-to(xl)
+    .equipment-popup
+        &__img
+            width: 400px
+        &__list
+            overflow-y: scroll
+            height: 50vh
+
+@include respond-to(md)
+    .equipment-popup
+        &__title
+            font-size: 22px
+            line-height: 30px
+        &__list
+            .list-item
+                font-size: 12px
+@include respond-to(md)
+    .equipment-popup
+        &__content-wrapper
+            flex-direction: column
+            margin: 20px
+        &__list
+            overflow-y: scroll
+            height: 20vh
+            li::after
+                top: 3px
+            li::before
+                top: -3px
+        &__img
+            width: auto
+            height: 40vh
+        &__title
+            font-size: 18px
+            line-height: 24px
+            margin-bottom: 10px
+
+@media screen and ( max-width: 380px )
+    .equipment-popup
+        &__list
+            overflow-y: scroll
+            height: 20vh
+        &__img
+            width: auto
+            height: 30vh
+    

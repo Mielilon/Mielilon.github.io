@@ -120,6 +120,8 @@
             &:after
                 top: 12px
                 left: 24px
+        .video__player-wrapper
+            width: 90vw
 @include respond-to(md)
     .about
         &__sidebar
@@ -147,9 +149,11 @@
         .video__player-wrapper
             height: 70vh
 
-@include respond-to(xm)
+@include respond-to(sm)
     .about
         padding-top: 0
+        .video__player-wrapper
+            width: 100%
 
 @media screen and ( max-width: 430px )
     .about

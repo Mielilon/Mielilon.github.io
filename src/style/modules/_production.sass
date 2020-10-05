@@ -41,3 +41,55 @@ section.production
         border-radius: 10px
         margin-top: 50px
         margin-left: 40px
+
+@include respond-to(xxl)
+    .production
+        &__description
+            margin-left: -70px
+            padding-left: 100px
+            padding-right: 20px
+            &-2
+                margin-right: -80px
+                padding-right: 80px
+                padding-left: 40px
+        &__button
+            margin-bottom: 50px
+@include respond-to(xl)
+    .production
+        &__img
+            max-width: 600px
+            margin-top: 50px
+        &__description
+            margin-left: -50px
+            padding-left: 90px
+            font-size: 14px
+            &-2
+                margin-right: -60px
+                padding-right: 80px
+                font-size: 14px
+@include respond-to(lg)
+    .production
+        &__img
+            width: 540px
+@include respond-to(md)
+    .production
+        &__item
+            flex-direction: column
+            align-items: center
+        &__description
+            width: 500px
+            &-2
+                width: 500px
+                align-items: flex-end
+        &__img
+            width: 100% 
+            margin-top: 0
+@include respond-to(sm)
+    .production
+        &__description
+            width: 100%
+            margin: 30px 0 10px
+            padding: 0 20px 0 40px 
+            &-2
+                width: 100%
+                padding: 0 20px 0 40px 

@@ -47,19 +47,31 @@
         line-height: 30px
         max-width: 390px
     
-.hat.services, .hat.contacts, .hat.company, .hat.cases-catalogue, .hat.partners-cards .header, .hat.case .header, .hat.equipment-page, .hat.vacancies
+.hat.services, 
+.hat.contacts, 
+.hat.company, 
+.hat.cases-catalogue, 
+.hat.partners-cards .header, 
+.hat.calculator-page .header,  
+.hat.case .header, 
+.hat.equipment-page, 
+.hat.vacancies
     margin-top: 0
     background-image: none
     background: linear-gradient(180deg, #242424 0%, #0F0F0F 100%)
     
-.hat.contacts, .hat.company, .hat.service
-    .hat__subtitle
+.hat.contacts, 
+.hat.company, 
+.hat.service .hat__subtitle
         line-height: 30px
 
-.hat.cases-catalogue, .hat.case
+.hat.cases-catalogue, 
+.hat.case
     height: auto
 
-.hat.case, .hat.partners-cards
+.hat.case, 
+.hat.partners-cards,
+.hat.calculator-page
     background-image: none
     background: $white !important
     color: $black
@@ -68,8 +80,6 @@
     background-image: url('./../img/backgrounds/service/brochure.png')
     .hat__title
         max-width: 500px
-
-
 @include respond-to(xxl)
     .hat
         overflow: hidden

@@ -1,0 +1,321 @@
+.hat.calculator-page
+    //= ../header.pug
+    .container
+        .content
+            h1.calculator-page__title Онлайн калькулятор
+            form.calculator-page__info-wrapper
+                .calculator-page__characteristic-wrapper.tabs-wrapper
+                    .calculator-page__tabs-buttons
+                        p.tabs-buttons__item.tabs-buttons__item_active(data-tab-button="1") Книжная продукция
+                        p.tabs-buttons__item(data-tab-button="2") Рекламная продукция
+                    .calculator-page__characteristic.characteristic.tabs-content.tabs-content_active(data-tab-content="1")
+                        .characteristic__item
+                            p.characteristic__title.characteristic__title_active Формат
+                            .characteristic__content-wrapper.active
+                                .characteristic__content
+                                    .calculator__item
+                                        img(src="./img/icons/calculator-1.png", alt="").calculator__icon
+                                        .calculator__info-wrapper
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="a4" name="format" value="A4")
+                                            label.label(for="a4") A4
+                                            p.calculator__description (210х297мм)
+                                    .calculator__item
+                                        img(src="./img/icons/calculator-2.png", alt="").calculator__icon
+                                        .calculator__info-wrapper
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="a5" name="format" value="A5")
+                                            label.label(for="a5") A5
+                                            p.calculator__description (210х297мм)
+                                    .calculator__item
+                                        img(src="./img/icons/calculator-3.png", alt="").calculator__icon
+                                        .calculator__info-wrapper
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="customizable" name="format" value="Сustomizable")
+                                            label.label(for="customizable") Свой размер
+                                            .calculator__parameters-wrapper
+                                                .calculator__parameter-wrapper
+                                                    label.calculator__parameters.number-label(for="height") Высота
+                                                    input.calculator__num-input.num-input(type="number" id="height" name="format")
+                                                .calculator__parameter-wrapper
+                                                    label.calculator__parameters.number-label(for="width") Ширина
+                                                    input.calculator__num-input.num-input(type="number" id="width" name="format")
+                        .characteristic__item
+                            p.characteristic__title.characteristic__title_active Ориентация
+                            .characteristic__content-wrapper.active
+                                .characteristic__content
+                                    .calculator__item
+                                        img(src="./img/icons/calculator-4.png", alt="").calculator__icon
+                                        .calculator__info-wrapper
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="vertically" name="layout" value="vertically")
+                                            label.label(for="vertically")
+                                    .calculator__item
+                                        img(src="./img/icons/calculator-5.png", alt="").calculator__icon
+                                        .calculator__info-wrapper
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="horizontally" name="layout" value="horizontally")
+                                            label.label(for='horizontally')
+                        .characteristic__item
+                            p.characteristic__title.characteristic__title_active Страницы в блоке
+                            .characteristic__content-wrapper.active
+                                .characteristic__content
+                                    .calculator__item
+                                        input.checkbox.calculator__checkbox(type="checkbox" id="black-and-white" name="colour" value="black-and-white")
+                                        label.label.label_row(for="black-and-white") Черно-белые
+                                    .calculator__item.m-l-30
+                                        input.checkbox.calculator__checkbox(type="checkbox" id="colored" name="colour" value="colored")
+                                        label.label.label_row(for='colored') Цветные
+                                    .calculator__item.calculator__item_col.m-l-30
+                                        label.label(for='pages') Кол-во полос
+                                        input.calculator__num-input.num-input(type="number" id="pages" name="colour")
+                        .characteristic__item
+                            p.characteristic__title.characteristic__title_active Цветные страницы в блоке
+                            .characteristic__content-wrapper.active
+                                .characteristic__content
+                                    .calculator__item
+                                        img(src="./img/icons/calculator-6.png", alt="").calculator__icon
+                                        .calculator__info-wrapper
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="one-block" name="colored-pages-in-a-block" value="one-block")
+                                            label.label(for="one-block") Одним блоком
+                                    .calculator__item.m-l-30
+                                        img(src="./img/icons/calculator-7.png", alt="").calculator__icon
+                                        .calculator__info-wrapper
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="throw-about" name="colored-pages-in-a-block" value="throw-about")
+                                            label.label(for="throw-about") Разбросаны по<br>книге
+                                    .calculator__item.calculator__item_col.m-l-30
+                                        label.label(for='pages-in-a-block') Кол-во полос
+                                        input.calculator__num-input.num-input(type="number" id="pages-in-a-block" name="colored-pages-in-a-block")
+                        .characteristic__item
+                            p.characteristic__title.characteristic__title_active Переплет
+                            .characteristic__content-wrapper.active
+                                .characteristic__content
+                                    .calculator__item
+                                        img(src="./img/icons/calculator-8.png", alt="").calculator__icon
+                                        .calculator__info-wrapper
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="cover" name="binding" value="cover")
+                                            label.label(for="cover") Обложка
+                                    .calculator__item.m-l-30
+                                        img(src="./img/icons/calculator-9.png", alt="").calculator__icon
+                                        .calculator__info-wrapper
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="cover-with-flaps" name="binding" value="cover-with-flaps")
+                                            label.label(for="cover-with-flaps") Обложка с<br>клапанами
+                                    .calculator__item.m-l-30
+                                        img(src="./img/icons/calculator-10.png", alt="").calculator__icon
+                                        .calculator__info-wrapper
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="hard-cover" name="binding" value="hard-cover")
+                                            label.label(for="hard-cover") Твердый (7 БЦ)
+                                    
+                                .characteristic__content.m-t-50
+                                    .calculator__item
+                                        img(src="./img/icons/calculator-11.png", alt="").calculator__icon
+                                        .calculator__info-wrapper
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="staple" name="binding" value="staple")
+                                            label.label(for="staple") Скоба
+                                    .calculator__item.m-l-30
+                                        img(src="./img/icons/calculator-12.png", alt="").calculator__icon
+                                        .calculator__info-wrapper
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="spring" name="binding" value="spring")
+                                            label.label(for="spring") Пружина
+                                    .calculator__item.m-l-30
+                                        img(src="./img/icons/calculator-13.png", alt="").calculator__icon
+                                        .calculator__info-wrapper
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="bolted" name="binding" value="bolted")
+                                            label.label(for="bolted") На болтах
+                        .characteristic__item
+                            p.characteristic__title.characteristic__title_active Форзац
+                            .characteristic__content-wrapper.active
+                                .characteristic__content
+                                    .calculator__item
+                                        input.checkbox.calculator__checkbox(type="checkbox" id="color-fly-leaf" name="fly-leaf" value="colored-fly-leaf")
+                                        label.label.label_row(for="color-fly-leaf") Цветной
+                                    .calculator__item.m-l-30
+                                        input.checkbox.calculator__checkbox(type="checkbox" id="black-and-white-fly-leaf" name="fly-leaf" value="black-and-white-fly-leaf")
+                                        label.label.label_row(for='black-and-white-fly-leaf') Черно-белый
+                                    .calculator__item.m-l-30
+                                        input.checkbox.calculator__checkbox(type="checkbox" id="clean-fly-leaf" name="fly-leaf" value="clean-fly-leaf")
+                                        label.label.label_row(for='clean-fly-leaf') Чистый
+                        .characteristic__item
+                            p.characteristic__title.characteristic__title_active Нахзац
+                            .characteristic__content-wrapper.active
+                                .characteristic__content
+                                    .calculator__item
+                                        input.checkbox.calculator__checkbox(type="checkbox" id="color-nachsatz" name="nachsatz" value="color-nachsatz")
+                                        label.label.label_row(for="color-nachsatz") Цветной
+                                    .calculator__item.m-l-30
+                                        input.checkbox.calculator__checkbox(type="checkbox" id="black-and-white-nachsatz" name="nachsatz" value="black-and-white-nachsatz")
+                                        label.label.label_row(for='black-and-white-nachsatz') Черно-белый
+                                    .calculator__item.m-l-30
+                                        input.checkbox.calculator__checkbox(type="checkbox" id="clean-nachsatz" name="nachsatz" value="clean-nachsatz")
+                                        label.label.label_row(for='clean-nachsatz') Чистый
+                        .characteristic__item
+                            p.characteristic__title.characteristic__title_active Капитал
+                            .characteristic__content-wrapper.active
+                                .characteristic__content.m-t-0
+                                    .calculator__item.select-wrapper
+                                        select#capital.select(required)
+                                            option 
+                                            option 1
+                                            option 2
+                                            option 3
+                                            option 4
+                                            option 5
+                        .characteristic__item
+                            p.characteristic__title.characteristic__title_active Ляссе
+                            .characteristic__content-wrapper.active
+                                .characteristic__content.m-t-0
+                                    .calculator__item.select-wrapper
+                                        select#ribbon.select(required)
+                                            option 
+                                            option 1
+                                            option 2
+                                            option 3
+                                            option 4
+                                            option 5
+                        .characteristic__item
+                            p.characteristic__title.characteristic__title_active Бумага
+                            .characteristic__content-wrapper.active
+                                .characteristic__content.m-t-0.j-c-s-b
+                                    .calculator__item.calculator__item_col
+                                        label.label(for="offset-paper") Офсетная
+                                        .select-wrapper.m-t-15
+                                            select#offset-paper.select(required)
+                                                option 
+                                                option 1
+                                                option 2
+                                                option 3
+                                                option 4
+                                                option 5
+                                    .calculator__item.calculator__item_col
+                                        label.label(for="coated-paper") Мелованная
+                                        .select-wrapper.m-t-15
+                                            select#coated-paper.select(required)
+                                                option 
+                                                option 1
+                                                option 2
+                                                option 3
+                                                option 4
+                                                option 5
+                        .characteristic__item
+                            p.characteristic__title.characteristic__title_active Шитье нитками
+                            .characteristic__content-wrapper.active
+                                .characteristic__content
+                                    .calculator__item
+                                        input.checkbox.calculator__checkbox(type="checkbox" id="sewing-with-thread-yes" name="sewing-with-thread" value="yes")
+                                        label.label.label_row(for="sewing-with-thread-yes") Есть
+                                    .calculator__item.m-l-30
+                                        input.checkbox.calculator__checkbox(type="checkbox" id="sewing-with-thread-no" name="sewing-with-thread" value="no")
+                                        label.label.label_row(for='sewing-with-thread-no') Нет
+                        .characteristic__item
+                            p.characteristic__title.characteristic__title_active Упаковка в пленку поэкземплярно
+                            .characteristic__content-wrapper.active
+                                .characteristic__content
+                                    .calculator__item
+                                        input.checkbox.calculator__checkbox(type="checkbox" id="packaging-yes" name="packaging" value="yes")
+                                        label.label.label_row(for="packaging-yes") Есть
+                                    .calculator__item.m-l-30
+                                        input.checkbox.calculator__checkbox(type="checkbox" id="packaging-no" name="packaging" value="no")
+                                        label.label.label_row(for='packaging-no') Нет
+                        .characteristic__item
+                            p.characteristic__title.characteristic__title_active Обложка
+                            .characteristic__content-wrapper.active
+                                .j-c-s-b
+                                    .characteristic__content.f-d-c
+                                        .calculator__item
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="colored-cover-type" name="cover-type" value="colored")
+                                            label.label.label_row(for="colored-cover-type") Цветная
+                                        .calculator__item.m-t-15
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="glossy-cover-type" name="cover-type" value="glossy")
+                                            label.label.label_row(for="glossy-cover-type") Глянцевая
+                                        .calculator__item.m-t-15
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="embossing-cover-type" name="cover-type" value="embossing")
+                                            label.label.label_row(for='embossing-cover-type') Тиснение
+                                    .characteristic__content.f-d-c
+                                        .calculator__item
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="lamination-cover-type" name="cover-type" value="lamination")
+                                            label.label.label_row(for='lamination-cover-type') Ламинация
+                                        .calculator__item.m-t-15
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="silk-feel" name="cover-type" value="silk-feel")
+                                            label.label.label_row(for="silk-feel") Silk Feel
+                                        .calculator__item.m-t-15
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="congreve-cover-type" name="cover-type" value="congreve")
+                                            label.label.label_row(for='congreve-cover-type') Конгрев
+                                    .characteristic__content.f-d-c
+                                        .calculator__item
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="matte-cover-type" name="cover-type" value="matte")
+                                            label.label.label_row(for="matte-cover-type") Матовая
+                                        .calculator__item.m-t-15
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="varnish-cover-type" name="cover-type" value="varnish")
+                                            label.label.label_row(for='varnish-cover-type') УФ лак
+                        .characteristic__item
+                            p.characteristic__title.characteristic__title_active Тираж
+                            .characteristic__content-wrapper.active
+                                .characteristic__content
+                                    .calculator__item
+                                        input.calculator__num-input.num-input_long.num-input(type="number" id="circulation" name="circulation")
+                        .characteristic__item
+                            p.characteristic__title.characteristic__title_active Тираж
+                            .characteristic__content-wrapper.active
+                                .j-c-s-b
+                                    .characteristic__content.f-d-c
+                                        .calculator__item
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="book-layout" name="circulation" value="book-layout")
+                                            label.label.label_row(for="book-layout") Верстка
+                                        .calculator__item.m-t-15
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="editing" name="circulation" value="editing")
+                                            label.label.label_row(for="editing") Редактура
+                                    .characteristic__content.f-d-c
+                                        .calculator__item
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="design" name="circulation" value="design")
+                                            label.label.label_row(for='design') Дизайн
+                                        .calculator__item.m-t-15
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="ISBN" name="circulation" value="ISBN")
+                                            label.label.label_row(for="ISBN") Присвоить номер ISBN
+                                    .characteristic__content.f-d-c
+                                        .calculator__item
+                                            input.checkbox.calculator__checkbox(type="checkbox" id="editing2" name="circulation" value="editing2")
+                                            label.label.label_row(for="editing2") Редактура
+                        .characteristic__item
+                            p.characteristic__title.characteristic__title_active Доставка по адресу
+                            .characteristic__content-wrapper.active
+                                .characteristic__content
+                                    textarea.calculator__textarea(name="address" placeholder='Введите адрес')
+
+                    .calculator-page__characteristic-wrapper.tabs-content(data-tab-content="2")
+                
+                
+                .calculator-page__order-details.order-details
+                    .order-details__cost-description Стоимость заказа
+                    .order-details__cost 15 933 ₽
+                    button.black-button.order-details__button(type='submit') Заказать
+                    .order-details__items-wrapper
+                        .order-details__item
+                            p.order-details__item-title Переплет:
+                            p.order-details__item-description Мягкий переплет
+                        .order-details__item
+                            p.order-details__item-title Формат:
+                            p.order-details__item-description А5
+                        .order-details__item
+                            p.order-details__item-title Ориентация:
+                            p.order-details__item-description Книжная
+                        .order-details__item
+                            p.order-details__item-title Обложка:
+                            p.order-details__item-description Черно-белая 300 г/м2
+                        .order-details__item
+                            p.order-details__item-title Ламинация:
+                            p.order-details__item-description Матовая
+                        .order-details__item
+                            p.order-details__item-title Книжный блок:
+                            p.order-details__item-description Черно-белые страницы
+                        .order-details__item
+                            p.order-details__item-title Количество страниц в книге:
+                            p.order-details__item-description 180
+                        .order-details__item
+                            p.order-details__item-title Книжный блок:
+                            p.order-details__item-description Бумага офсетная 80 г/м2
+                        .order-details__item
+                            p.order-details__item-title Цветные страницы:
+                            p.order-details__item-description Цветные вставки разбросаны по книге
+                        .order-details__item
+                            p.order-details__item-title Количество цветных страниц в книге:
+                            p.order-details__item-description 20
+                        .order-details__item
+                            p.order-details__item-title Тираж:
+                            p.order-details__item-description 1
+
+

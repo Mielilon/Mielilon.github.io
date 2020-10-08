@@ -34,7 +34,7 @@ jQuery(function ($) {
   });
 });
 
-//код для каталога
+//код для галереи оборудования
 
 var links = [
   "./img/equipment/equipment-1.png",
@@ -90,3 +90,11 @@ $(".tabs-buttons__item").click(function (event) {
     .children(`.tabs-content[data-tab-content="${tabId}"]`)
     .toggleClass("tabs-content_active");
 });
+
+//код для галереи кейсов
+
+
+//код для открытия вкладок с информацией на странице калькулятора
+$('.characteristic__title').click(function() {
+  $(this).closest('.characteristic__title').toggleClass('characteristic__title_active')
+})

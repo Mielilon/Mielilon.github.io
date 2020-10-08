@@ -1,0 +1,193 @@
+//inputs
+.checkbox
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+.checkbox + .label
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: flex-start
+  user-select: none
+  top: 0
+
+.checkbox + .label_row
+    flex-direction: row
+    align-items: center
+
+.checkbox + .label_col-reverse
+    flex-direction: column-reverse
+    align-items: start
+
+.checkbox + .label::before 
+  content: ''
+  display: inline-block
+  width: 23px
+  height: 23px
+  flex-shrink: 0
+  flex-grow: 0
+  border: none
+  border-radius: 0.25em
+  margin-right: 0.5em
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: 50% 50%
+  background-color: $white
+  margin-bottom: 15px
+  cursor: pointer
+
+.checkbox + .label_row::before
+    margin: 0
+    margin-right: 20px  
+
+.checkbox:checked + .label::before 
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='2C2C2C' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+
+
+.num-input
+    width: 67px
+    height: 23px
+    background: #FFFFFF
+    border-radius: 3px
+    border: none
+    outline: none
+    color: $black
+    font-size: 14px
+    text-align: center
+.num-input::-webkit-outer-spin-button, .num-input::-webkit-inner-spin-button 
+    -webkit-appearance: none
+    margin: 0
+.number-label
+    font-weight: 300
+    font-size: 14px
+    margin-right: 5px
+    line-height: 22px
+    color: #08090B
+.input-tel
+    outline: none
+    width: 350px
+    height: 50px
+    border: none
+    border-bottom: 2px solid $black
+    margin: 10px 0
+    color: $black
+    font-size: 28px
+    line-height: 33px
+    font-weight: 300
+    font-family: Roboto
+    padding: 10px 0 23px
+    &::placeholder
+        color: $black
+.select
+    width: 210px
+    height: 35px
+    background: #FFFFFF
+    border-radius: 3px
+    padding: 6px 12px
+    border: none
+    outline: none
+    color: $black
+    font-size: 14px
+    text-align: center
+    appearance: none
+    background: url("./../img/icons/select.svg") no-repeat 95% center
+    background-color: $white
+.select-wrapper
+    width: auto
+    position: relative
+    &::after
+        content: ''
+        position: absolute
+        width: 2px
+        height: 100%
+        background-color: #F6F6F6
+        right: 30px
+        
+.form
+    &__label
+        font-family: Roboto
+        font-weight: 300
+        font-size: 14px
+        line-height: 16px
+        margin-bottom: 10px
+    &__inputs-wrapper
+        display: grid
+        grid-template-columns: 1fr 2fr 1fr
+        grid-gap: 50px
+    &__input-wrapper
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        position: relative
+    &__input
+        border: 2px dotted #918e8e
+        border-radius: 10px
+        background-color: $white
+        font-weight: 300
+        font-size: 16px
+        line-height: 19px
+        color: #3D3D3D
+        font-family: Roboto
+        outline: none
+        padding: 12px 22px
+        width: 100%
+        &::placeholder
+            font-weight: 300
+            font-size: 16px
+            line-height: 19px
+            color: #A2A2A2
+    &__file
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-items: center
+        height: 135px
+    &__file-label
+        font-weight: 300
+        font-size: 16px
+        line-height: 19px
+        color: #A2A2A2
+    &__input-select
+        appearance: none
+        background: url("./../img/icons/select.svg") no-repeat 96% center
+        background-color: $white
+    &__checkbox-label
+        font-weight: 300
+        font-size: 14px
+        line-height: 20px
+        max-width: 320px
+        flex-direction: row !important
+    .checkbox:checked + &__checkbox-label::before 
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='white' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+        background-color: black
+            
+    &__img
+        padding-bottom: 10px
+    &__button-wrapper
+        width: 100%
+        display: flex
+        justify-content: center
+        margin-top: 45px
+        margin-bottom: 105px
+    &__button
+        padding: 10px 20px
+
+@include respond-to(lg)
+    .form
+        &__inputs-wrapper
+            grid-template-columns: 1fr 
+            grid-template-rows: repeat(3, 1fr)
+        &__input
+            width: 416px
+
+@include respond-to(xs)
+    .form
+        padding: 0 20px
+        &__inputs-wrapper
+            grid-template-columns: 1fr 
+            grid-template-rows: repeat(3, 1fr)
+        &__input
+            width: 100% 
+
+

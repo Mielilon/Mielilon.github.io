@@ -41,6 +41,10 @@
 
 
 .characteristic
+    &__grid
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 
+        
     &__item
         width: 100%
         padding: 0 50px
@@ -60,7 +64,9 @@
             margin-right: 20px
     &__title
         font-size: 20px
-        line-height: 70px
+        line-height: 22px
+        padding: 25px 0
+        padding-right: 20px
         margin: 0
         position: relative
         user-select: none
@@ -119,11 +125,73 @@
     &__item-title
         font-weight: 500
         font-size: 16px
-        line-height: 40px
+        line-height: 18px
         margin: 0
+        padding: 10px 0 
     &__item-description
         font-weight: 300
         margin: 0
         margin-left: 6px
         font-size: 16px
-        line-height: 40px
+        line-height: 18px
+        padding: 10px 0 
+
+@include respond-to(xl)
+    .calculator-page 
+        &__characteristic-wrapper
+            width: 450px
+        &__tabs-buttons
+            text-align: center
+    .characteristic
+        &__content
+            flex-wrap: wrap
+        .calculator__item
+            margin: 15px 25px 15px 0 !important
+        &__grid
+            grid-template-rows:  auto auto
+            grid-template-columns: auto auto
+            grid-row-gap: -30px
+@include respond-to(xl)
+    .calculator-page
+        &__info-wrapper
+            flex-direction: column
+            align-items: center
+    .order-details
+        position: relative
+
+@include respond-to(sm)
+    .calculator-page
+        .content
+            padding: 0 20px
+        &__characteristic-wrapper
+            width: 100%
+        &__tabs-buttons
+            flex-direction: column
+            margin-bottom: 0
+            .tabs-buttons__item
+                margin-bottom: 20px
+    .order-details
+        margin-left: 0
+        align-items: center
+        &__item
+            flex-direction: column
+            align-items: center
+        &__item-title
+            text-align: center
+        &__item-description
+            text-align: center
+    .characteristic
+        &__grid
+            grid-template-rows:  auto auto auto
+            grid-template-columns: auto
+
+@media screen and ( max-width: 380px )
+    .calculator-page
+        .content
+            padding: 0 20px
+        &__characteristic-wrapper
+            width: 280px
+    .characteristic
+        &__item
+            padding: 0 30px
+    

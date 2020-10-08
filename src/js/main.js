@@ -95,6 +95,9 @@ $(".tabs-buttons__item").click(function (event) {
 
 
 //код для открытия вкладок с информацией на странице калькулятора
-$('.characteristic__title').click(function() {
+$('.characteristic__item').click(function() {
   $(this).closest('.characteristic__title').toggleClass('characteristic__title_active')
+  $(this).closest('.characteristic__content-wrapper').toggleClass('active')
 })
+
+

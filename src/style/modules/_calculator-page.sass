@@ -15,6 +15,7 @@
         justify-content: start
         width: 100%
         margin-top: 30px
+        position: relative
     &__tabs-buttons
         display: flex
         align-items: center
@@ -63,10 +64,15 @@
         margin: 0
         position: relative
         user-select: none
+        &:hover::before, &:hover::after
+            transform: scale(1.5)
         &::after
             @include background-image('./../img/icons/minus.png')
+            opacity: 0
         &::before
             @include background-image('./../img/icons/plus.png')
+            &:hover
+                transform: scale(1.2)
         &::before, &::after
             content: ''
             position: absolute
@@ -89,6 +95,8 @@
 
 .order-details
     display: flex
+    position: sticky
+    top: 60px
     flex-direction: column
     align-items: start
     margin-left: 90px

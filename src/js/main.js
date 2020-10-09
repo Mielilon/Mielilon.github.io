@@ -101,10 +101,10 @@ $('.characteristic__title').click(function() {
 //код для галереи кейсов
 var linksCases = [
   "./img/cases/bound-editions/case-1/cases-1.png",
-  "./img/cases/bound-editions/cases-2.png",
-  "./img/cases/bound-editions/case-1/cases-1.png",
-  "./img/cases/bound-editions/case-1/cases-1.png",
-  "./img/cases/bound-editions/case-1/cases-1.png",
+  "./img/cases/bound-editions/case-1/cases-2.png",
+  "./img/cases/bound-editions/case-1/cases-3.png",
+  "./img/cases/bound-editions/case-1/cases-4.png",
+  "./img/cases/bound-editions/case-1/cases-2.png",
 ];
 
 var thumbnailsCase = document.querySelectorAll(".case__img");

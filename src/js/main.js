@@ -48,12 +48,12 @@ var thumbnails = document.querySelectorAll(".equipment__item");
 var fullPhoto = document.querySelector(".equipment__full-img");
 
 for (var i = 0; i < thumbnails.length; i++) {
-  var addThumbnailsClickHandler = function (thumbnail, link) {
+  var addThumbnailsMouseHandler = function (thumbnail, link) {
     thumbnail.addEventListener("mouseenter", function () {
       fullPhoto.src = link;
     });
   };
-  addThumbnailsClickHandler(thumbnails[i], links[i]);
+  addThumbnailsMouseHandler(thumbnails[i], links[i]);
 }
 
 //открытие-закрытие телефонного меню
@@ -91,8 +91,6 @@ $(".tabs-buttons__item").click(function (event) {
     .toggleClass("tabs-content_active");
 });
 
-//код для галереи кейсов
-
 
 //код для открытия вкладок с информацией на странице калькулятора
 $('.characteristic__title').click(function() {
@@ -100,4 +98,23 @@ $('.characteristic__title').click(function() {
   $(this).siblings('.characteristic__content-wrapper').toggleClass('active')
 })
 
+//код для галереи кейсов
+var linksCases = [
+  "./img/cases/bound-editions/case-1/cases-1.png",
+  "./img/cases/bound-editions/cases-2.png",
+  "./img/cases/bound-editions/case-1/cases-1.png",
+  "./img/cases/bound-editions/case-1/cases-1.png",
+  "./img/cases/bound-editions/case-1/cases-1.png",
+];
 
+var thumbnailsCase = document.querySelectorAll(".case__img");
+var fullPhotoCase = document.querySelector(".case__full-img");
+
+for (var i = 0; i < thumbnailsCase.length; i++) {
+  var addThumbnailsClickHandler = function (thumbnail, link) {
+    thumbnail.addEventListener("click", function () {
+      fullPhotoCase.src = link;
+    });
+  };
+  addThumbnailsClickHandler(thumbnailsCase[i], linksCases[i]);
+}

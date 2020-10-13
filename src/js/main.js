@@ -98,6 +98,26 @@ $('.characteristic__title').click(function() {
   $(this).siblings('.characteristic__content-wrapper').toggleClass('active')
 })
 
+//код для открытия видео
+$('.video__black-bar').click(function() {
+  $(this).siblings('.video__player-wrapper').toggleClass('active')
+})
+//код для открытия видео в отзывах
+$('.video-reviews__item-wrapper').click(function() {
+  $('.video-reviews__full-video').addClass('active')
+  $('.video-reviews__item-wrapper').removeClass('video-reviews_active')
+  $(this).addClass('video-reviews_active')
+})
+$('.video-reviews').click(function (e) {
+  const videoReviewsItems = ".video-reviews__items-wrapper";
+  if (
+    $(e.target).closest(videoReviewsItems).length
+  )
+    return;
+  $(".video-reviews__full-video").removeClass("active");
+  $('.video-reviews__item-wrapper').removeClass('video-reviews_active')
+});
+
 //код для галереи кейсов
 var linksCases = [
   "./img/cases/bound-editions/case-1/cases-1.png",

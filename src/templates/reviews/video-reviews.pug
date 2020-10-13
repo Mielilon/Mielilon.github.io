@@ -3,7 +3,7 @@ section.video-reviews
         .content
             h1.video-reviews__title  Видео отзывы
             .video-reviews__items-wrapper
-                button.video-reviews__item-wrapper.video-reviews_active
+                button.video-reviews__item-wrapper
                     img.video-reviews__item(src="./img/video/video-reviews-1.png", alt="")
                 button.video-reviews__item-wrapper
                     img.video-reviews__item(src="./img/video/video-reviews-1.png", alt="")
@@ -22,6 +22,6 @@ section.video-reviews
 .video.video-reviews__full-video
     .container
         .content
-            .video__player-wrapper.js-videoWrapper
+            .video__player-wrapper.js-videoWrapper.active
                 iframe.video__iframe.js-videoIframe(src='', frameborder='0', allowtransparency='true', allowfullscreen='', data-src='https://www.youtube.com/embed/2OEL4P1Rz04')
                 button.video__poster.js-videoPoster

@@ -8,6 +8,8 @@
     &__title
         text-align: center
         margin-top: 0
+        cursor: default
+        user-select: none
     &__items-wrapper
         display: flex
     &__arrow
@@ -69,8 +71,11 @@
             border-right: 8px solid $white
             border-top: none
             border-bottom: none
+    &__full-video
+        display: none
     &__full-video .video__player-wrapper
         height: 800px
+
 
 @include respond-to(xxl)
     .video-reviews

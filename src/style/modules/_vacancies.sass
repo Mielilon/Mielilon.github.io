@@ -20,18 +20,22 @@ section.vacancies
         margin-bottom: 0
         margin-top: 25px
         position: relative
+        &:hover::before, &:hover::after
+            transform: scale(1.5)
         &::after
             @include background-image('./../img/icons/minus.png')
+            opacity: 0
         &::before
-            @include background-image('./../img/icons/plus.png')
+            @include background-image('./../img/icons/big-plus.png')
         &::before, &::after
             content: ''
             position: absolute
             width: 15px
             height: 15px
             right: 0
-            top: 30px
+            top: 10px
             background-size: contain
+            transition: .3s
         &_active
             &::before
                 opacity: 0
@@ -39,6 +43,7 @@ section.vacancies
             &::after
                 opacity: 1
                 transition: .3s
+                
     &__description
         font-weight: 300
         font-size: 16px

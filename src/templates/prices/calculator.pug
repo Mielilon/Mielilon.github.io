@@ -280,9 +280,23 @@
                 
                 
                 .calculator-page__order-details.order-details
-                    .order-details__cost-description Стоимость заказа
-                    .order-details__cost 15 933 ₽
-                    button.black-button.order-details__button(type='submit') Заказать
+                    .order-details__cost-description Куда отправить расчет стоимости
+                    .order-details__inputs-wrapper
+                        .order-details__input
+                            input.checkbox.checkbox_black-border(type="checkbox" id="order-details-tel" name="order-details" value="Tel")
+                            label.label.label_row(for="order-details-tel") Телефон
+                        .order-details__input
+                            input.checkbox.checkbox_black-border(type="checkbox" id="order-details-mail" name="order-details" value="E-mail")
+                            label.label.label_row(for="order-details-mail") E-mail
+                        .order-details__input
+                            input.checkbox.checkbox_black-border(type="checkbox" id="order-details-whatsapp" name="order-details" value="Whatsapp")
+                            label.label.label_row(for="order-details-whatsapp") Whatsapp
+                    .order-details__inputs-wrapper
+                        input#order-tel.form__input.m-t-30(type="tel" required placeholder='Ваш телефон')
+                        input#order-mail.form__input.m-t-30(type="email" required placeholder='Ваш E-mail')
+                        input#order-whatsapp.form__input.m-t-30(type="tel" required placeholder='Ваш Whatsapp')
+                        textarea#order-text.form__input.order-details__textarea(name="order-tex" required placeholder='Ваш комментарий')
+                        button.black-button.order-details__button(type='submit') Отправить
                     .order-details__items-wrapper
                         .order-details__item
                             p.order-details__item-title Переплет:
@@ -317,5 +331,9 @@
                         .order-details__item
                             p.order-details__item-title Тираж:
                             p.order-details__item-description 1
+                .after-sending  
+                    .after-sending__title Спасибо за заявку!
+                    .after-sending__description Мы пришлем вам расчет в ближайшее время выбранным вами способом 
+                
 
 

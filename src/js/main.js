@@ -138,3 +138,38 @@ for (var i = 0; i < thumbnailsCase.length; i++) {
   };
   addThumbnailsClickHandler(thumbnailsCase[i], linksCases[i]);
 }
+
+
+//код для калькулятора
+$( ".order-details__inputs-wrapper" ).change(function() {
+  $('.order-details__form-wrapper').addClass('active')
+});
+
+$( "#order-details-tel" ).change(function() {
+  $('#order-tel').css('display', 'block');
+  $('#order-mail').css('display', 'none');
+  $('#order-whatsapp').css('display', 'none');
+});
+
+$( "#order-details-mail" ).change(function() {
+  $('#order-tel').css('display', 'none');
+  $('#order-mail').css('display', 'block');
+  $('#order-whatsapp').css('display', 'none');
+});
+
+$( "#order-details-whatsapp" ).change(function() {
+  $('#order-tel').css('display', 'none');
+  $('#order-mail').css('display', 'none');
+  $('#order-whatsapp').css('display', 'block');
+});
+
+
+//стили после отправки формы
+$('.calculator-page__form').submit(function() {
+  var $form = $(this);
+  $form.parsley().validate();
+  if ($form.parsley().isValid())
+     $('.calculator-page__order-details.order-details').css('display', 'none');
+     $('.after-sending').css('display', 'block');
+
+});

@@ -3,7 +3,7 @@
     .container
         .content
             h1.calculator-page__title Онлайн калькулятор
-            form.calculator-page__info-wrapper
+            form.calculator-page__info-wrapper.calculator-page__form
                 .calculator-page__characteristic-wrapper.tabs-wrapper
                     .calculator-page__tabs-buttons
                         p.tabs-buttons__item.tabs-buttons__item_active(data-tab-button="1") Книжная продукция
@@ -16,19 +16,19 @@
                                     .calculator__item
                                         img(src="./img/icons/calculator-1.png", alt="").calculator__icon
                                         .calculator__info-wrapper
-                                            input.checkbox.calculator__checkbox(type="checkbox" id="a4" name="format" value="A4")
+                                            input.checkbox.calculator__checkbox(type="radio" id="a4" name="format" value="A4")
                                             label.label(for="a4") A4
                                             p.calculator__description (210х297мм)
                                     .calculator__item
                                         img(src="./img/icons/calculator-2.png", alt="").calculator__icon
                                         .calculator__info-wrapper
-                                            input.checkbox.calculator__checkbox(type="checkbox" id="a5" name="format" value="A5")
+                                            input.checkbox.calculator__checkbox(type="radio" id="a5" name="format" value="A5")
                                             label.label(for="a5") A5
                                             p.calculator__description (210х297мм)
                                     .calculator__item
                                         img(src="./img/icons/calculator-3.png", alt="").calculator__icon
                                         .calculator__info-wrapper
-                                            input.checkbox.calculator__checkbox(type="checkbox" id="customizable" name="format" value="Сustomizable")
+                                            input.checkbox.calculator__checkbox(type="radio" id="customizable" name="format" value="Сustomizable")
                                             label.label(for="customizable") Свой размер
                                             .calculator__parameters-wrapper
                                                 .calculator__parameter-wrapper
@@ -44,12 +44,12 @@
                                     .calculator__item
                                         img(src="./img/icons/calculator-4.png", alt="").calculator__icon
                                         .calculator__info-wrapper
-                                            input.checkbox.calculator__checkbox(type="checkbox" id="vertically" name="layout" value="vertically")
+                                            input.checkbox.calculator__checkbox(type="radio" id="vertically" name="layout" value="vertically")
                                             label.label(for="vertically")
                                     .calculator__item
                                         img(src="./img/icons/calculator-5.png", alt="").calculator__icon
                                         .calculator__info-wrapper
-                                            input.checkbox.calculator__checkbox(type="checkbox" id="horizontally" name="layout" value="horizontally")
+                                            input.checkbox.calculator__checkbox(type="radio" id="horizontally" name="layout" value="horizontally")
                                             label.label(for='horizontally')
                         .characteristic__item
                             p.characteristic__title Страницы в блоке
@@ -122,26 +122,26 @@
                             .characteristic__content-wrapper
                                 .characteristic__content
                                     .calculator__item
-                                        input.checkbox.calculator__checkbox(type="checkbox" id="color-fly-leaf" name="fly-leaf" value="colored-fly-leaf")
+                                        input.checkbox.calculator__checkbox(type="radio" id="color-fly-leaf" name="fly-leaf" value="colored-fly-leaf")
                                         label.label.label_row(for="color-fly-leaf") Цветной
                                     .calculator__item.m-l-30
-                                        input.checkbox.calculator__checkbox(type="checkbox" id="black-and-white-fly-leaf" name="fly-leaf" value="black-and-white-fly-leaf")
+                                        input.checkbox.calculator__checkbox(type="radio" id="black-and-white-fly-leaf" name="fly-leaf" value="black-and-white-fly-leaf")
                                         label.label.label_row(for='black-and-white-fly-leaf') Черно-белый
                                     .calculator__item.m-l-30
-                                        input.checkbox.calculator__checkbox(type="checkbox" id="clean-fly-leaf" name="fly-leaf" value="clean-fly-leaf")
+                                        input.checkbox.calculator__checkbox(type="radio" id="clean-fly-leaf" name="fly-leaf" value="clean-fly-leaf")
                                         label.label.label_row(for='clean-fly-leaf') Чистый
                         .characteristic__item
                             p.characteristic__title Нахзац
                             .characteristic__content-wrapper
                                 .characteristic__content
                                     .calculator__item
-                                        input.checkbox.calculator__checkbox(type="checkbox" id="color-nachsatz" name="nachsatz" value="color-nachsatz")
+                                        input.checkbox.calculator__checkbox(type="radio" id="color-nachsatz" name="nachsatz" value="color-nachsatz")
                                         label.label.label_row(for="color-nachsatz") Цветной
                                     .calculator__item.m-l-30
-                                        input.checkbox.calculator__checkbox(type="checkbox" id="black-and-white-nachsatz" name="nachsatz" value="black-and-white-nachsatz")
+                                        input.checkbox.calculator__checkbox(type="radio" id="black-and-white-nachsatz" name="nachsatz" value="black-and-white-nachsatz")
                                         label.label.label_row(for='black-and-white-nachsatz') Черно-белый
                                     .calculator__item.m-l-30
-                                        input.checkbox.calculator__checkbox(type="checkbox" id="clean-nachsatz" name="nachsatz" value="clean-nachsatz")
+                                        input.checkbox.calculator__checkbox(type="radio" id="clean-nachsatz" name="nachsatz" value="clean-nachsatz")
                                         label.label.label_row(for='clean-nachsatz') Чистый
                         .characteristic__item
                             p.characteristic__title Капитал
@@ -196,20 +196,20 @@
                             .characteristic__content-wrapper
                                 .characteristic__content
                                     .calculator__item
-                                        input.checkbox.calculator__checkbox(type="checkbox" id="sewing-with-thread-yes" name="sewing-with-thread" value="yes")
+                                        input.checkbox.calculator__checkbox(type="radio" id="sewing-with-thread-yes" name="sewing-with-thread" value="yes")
                                         label.label.label_row(for="sewing-with-thread-yes") Есть
                                     .calculator__item.m-l-30
-                                        input.checkbox.calculator__checkbox(type="checkbox" id="sewing-with-thread-no" name="sewing-with-thread" value="no")
+                                        input.checkbox.calculator__checkbox(type="radio" id="sewing-with-thread-no" name="sewing-with-thread" value="no")
                                         label.label.label_row(for='sewing-with-thread-no') Нет
                         .characteristic__item
                             p.characteristic__title Упаковка в пленку поэкземплярно
                             .characteristic__content-wrapper
                                 .characteristic__content
                                     .calculator__item
-                                        input.checkbox.calculator__checkbox(type="checkbox" id="packaging-yes" name="packaging" value="yes")
+                                        input.checkbox.calculator__checkbox(type="radio" id="packaging-yes" name="packaging" value="yes")
                                         label.label.label_row(for="packaging-yes") Есть
                                     .calculator__item.m-l-30
-                                        input.checkbox.calculator__checkbox(type="checkbox" id="packaging-no" name="packaging" value="no")
+                                        input.checkbox.calculator__checkbox(type="radio" id="packaging-no" name="packaging" value="no")
                                         label.label.label_row(for='packaging-no') Нет
                         .characteristic__item
                             p.characteristic__title Обложка
@@ -283,19 +283,19 @@
                     .order-details__cost-description Куда отправить расчет стоимости
                     .order-details__inputs-wrapper
                         .order-details__input
-                            input.checkbox.checkbox_black-border(type="checkbox" id="order-details-tel" name="order-details" value="Tel")
+                            input.checkbox.checkbox_black-border(type="radio" id="order-details-tel" name="order-details" value="Tel")
                             label.label.label_row(for="order-details-tel") Телефон
                         .order-details__input
-                            input.checkbox.checkbox_black-border(type="checkbox" id="order-details-mail" name="order-details" value="E-mail")
+                            input.checkbox.checkbox_black-border(type="radio" id="order-details-mail" name="order-details" value="E-mail")
                             label.label.label_row(for="order-details-mail") E-mail
                         .order-details__input
-                            input.checkbox.checkbox_black-border(type="checkbox" id="order-details-whatsapp" name="order-details" value="Whatsapp")
+                            input.checkbox.checkbox_black-border(type="radio" id="order-details-whatsapp" name="order-details" value="Whatsapp")
                             label.label.label_row(for="order-details-whatsapp") Whatsapp
-                    .order-details__inputs-wrapper
-                        input#order-tel.form__input.m-t-30(type="tel" required placeholder='Ваш телефон')
-                        input#order-mail.form__input.m-t-30(type="email" required placeholder='Ваш E-mail')
-                        input#order-whatsapp.form__input.m-t-30(type="tel" required placeholder='Ваш Whatsapp')
-                        textarea#order-text.form__input.order-details__textarea(name="order-tex" required placeholder='Ваш комментарий')
+                    .order-details__form-wrapper
+                        input#order-tel.form__input.m-t-30(type="tel" placeholder='Ваш телефон')
+                        input#order-mail.form__input.m-t-30(type="email" placeholder='Ваш E-mail')
+                        input#order-whatsapp.form__input.m-t-30(type="tel" placeholder='Ваш Whatsapp')
+                        textarea#order-text.form__input.order-details__textarea(name="order-tex" placeholder='Ваш комментарий')
                         button.black-button.order-details__button(type='submit') Отправить
                     .order-details__items-wrapper
                         .order-details__item

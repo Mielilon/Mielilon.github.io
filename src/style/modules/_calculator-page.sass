@@ -101,6 +101,8 @@
 .order-details
     display: flex
     position: sticky
+    max-height: 90vh 
+    overflow-y: scroll
     top: 60px
     flex-direction: column
     align-items: start
@@ -141,8 +143,16 @@
         min-width: 100%
         height: 100px
         margin: 10px 0 26px 0
-    &__inputs-wrapper
+    &__form-wrapper
         max-width: 380px
+        display: none
+        #order-tel
+            display: none
+        #order-mail
+            display: none
+        #order-whatsapp
+            display: none
+
 
 .after-sending
     display: none

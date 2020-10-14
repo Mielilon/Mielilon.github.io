@@ -148,7 +148,7 @@
                             .characteristic__content-wrapper
                                 .characteristic__content.m-t-0
                                     .calculator__item.select-wrapper
-                                        select#capital.select(required)
+                                        select#capital.select(name="paper")
                                             option 
                                             option 1
                                             option 2
@@ -160,7 +160,7 @@
                             .characteristic__content-wrapper
                                 .characteristic__content.m-t-0
                                     .calculator__item.select-wrapper
-                                        select#ribbon.select(required)
+                                        select#ribbon.select(name="paper")
                                             option 
                                             option 1
                                             option 2
@@ -174,7 +174,7 @@
                                     .calculator__item.calculator__item_col
                                         label.label(for="offset-paper") Офсетная
                                         .select-wrapper.m-t-15
-                                            select#offset-paper.select(required)
+                                            select#offset-paper.select(name="paper")
                                                 option 
                                                 option 1
                                                 option 2
@@ -184,7 +184,7 @@
                                     .calculator__item.calculator__item_col
                                         label.label(for="coated-paper") Мелованная
                                         .select-wrapper.m-t-15
-                                            select#coated-paper.select(required)
+                                            select#coated-paper.select(name="paper")
                                                 option 
                                                 option 1
                                                 option 2
@@ -292,9 +292,9 @@
                             input.checkbox.checkbox_black-border(type="radio" id="order-details-whatsapp" name="order-details" value="Whatsapp")
                             label.label.label_row(for="order-details-whatsapp") Whatsapp
                     .order-details__form-wrapper
-                        input#order-tel.form__input.m-t-30(type="tel" placeholder='Ваш телефон')
-                        input#order-mail.form__input.m-t-30(type="email" placeholder='Ваш E-mail')
-                        input#order-whatsapp.form__input.m-t-30(type="tel" placeholder='Ваш Whatsapp')
+                        input#order-tel.form__input.m-t-30(type="tel" name="phone" placeholder='Ваш телефон')
+                        input#order-mail.form__input.m-t-30(type="email" name="email" placeholder='Ваш E-mail')
+                        input#order-whatsapp.form__input.m-t-30(type="tel" name="whatsapp" placeholder='Ваш Whatsapp')
                         textarea#order-text.form__input.order-details__textarea(name="order-tex" placeholder='Ваш комментарий')
                         button.black-button.order-details__button(type='submit') Отправить
                     .order-details__items-wrapper

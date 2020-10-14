@@ -91,31 +91,27 @@ $(".tabs-buttons__item").click(function (event) {
     .toggleClass("tabs-content_active");
 });
 
-
 //код для открытия вкладок с информацией на странице калькулятора
-$('.characteristic__title').click(function() {
-  $(this).toggleClass('characteristic__title_active')
-  $(this).siblings('.characteristic__content-wrapper').toggleClass('active')
-})
+$(".characteristic__title").click(function () {
+  $(this).toggleClass("characteristic__title_active");
+  $(this).siblings(".characteristic__content-wrapper").toggleClass("active");
+});
 
 //код для открытия видео
-$('.video__black-bar').click(function() {
-  $(this).siblings('.video__player-wrapper').toggleClass('active')
-})
+$(".video__black-bar").click(function () {
+  $(this).siblings(".video__player-wrapper").toggleClass("active");
+});
 //код для открытия видео в отзывах
-$('.video-reviews__item-wrapper').click(function() {
-  $('.video-reviews__full-video').addClass('active')
-  $('.video-reviews__item-wrapper').removeClass('video-reviews_active')
-  $(this).addClass('video-reviews_active')
-})
-$('.video-reviews').click(function (e) {
+$(".video-reviews__item-wrapper").click(function () {
+  $(".video-reviews__full-video").addClass("active");
+  $(".video-reviews__item-wrapper").removeClass("video-reviews_active");
+  $(this).addClass("video-reviews_active");
+});
+$(".video-reviews").click(function (e) {
   const videoReviewsItems = ".video-reviews__items-wrapper";
-  if (
-    $(e.target).closest(videoReviewsItems).length
-  )
-    return;
+  if ($(e.target).closest(videoReviewsItems).length) return;
   $(".video-reviews__full-video").removeClass("active");
-  $('.video-reviews__item-wrapper').removeClass('video-reviews_active')
+  $(".video-reviews__item-wrapper").removeClass("video-reviews_active");
 });
 
 //код для галереи кейсов
@@ -139,37 +135,33 @@ for (var i = 0; i < thumbnailsCase.length; i++) {
   addThumbnailsClickHandler(thumbnailsCase[i], linksCases[i]);
 }
 
-
 //код для калькулятора
-$( ".order-details__inputs-wrapper" ).change(function() {
-  $('.order-details__form-wrapper').addClass('active')
+$(".order-details__inputs-wrapper").change(function () {
+  $(".order-details__form-wrapper").addClass("active");
 });
 
-$( "#order-details-tel" ).change(function() {
-  $('#order-tel').css('display', 'block');
-  $('#order-mail').css('display', 'none');
-  $('#order-whatsapp').css('display', 'none');
+$("#order-details-tel").change(function () {
+  $("#order-tel").css("display", "block");
+  $("#order-mail").css("display", "none");
+  $("#order-whatsapp").css("display", "none");
 });
 
-$( "#order-details-mail" ).change(function() {
-  $('#order-tel').css('display', 'none');
-  $('#order-mail').css('display', 'block');
-  $('#order-whatsapp').css('display', 'none');
+$("#order-details-mail").change(function () {
+  $("#order-tel").css("display", "none");
+  $("#order-mail").css("display", "block");
+  $("#order-whatsapp").css("display", "none");
 });
 
-$( "#order-details-whatsapp" ).change(function() {
-  $('#order-tel').css('display', 'none');
-  $('#order-mail').css('display', 'none');
-  $('#order-whatsapp').css('display', 'block');
+$("#order-details-whatsapp").change(function () {
+  $("#order-tel").css("display", "none");
+  $("#order-mail").css("display", "none");
+  $("#order-whatsapp").css("display", "block");
 });
-
 
 //стили после отправки формы
-$('.calculator-page__form').submit(function() {
-  var $form = $(this);
-  $form.parsley().validate();
-  if ($form.parsley().isValid())
-     $('.calculator-page__order-details.order-details').css('display', 'none');
-     $('.after-sending').css('display', 'block');
-
+$(".calculator-page__form").submit(function (e) {
+  const form = $(this);
+  $(".calculator-page__order-details.order-details").css("display", "none");
+  $(".after-sending").css("display", "block");
+  e.preventDefault();
 });

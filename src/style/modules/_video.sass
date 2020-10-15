@@ -1,4 +1,8 @@
 .video
+    &:hover
+        .video__player-description:before
+            background-color: #9F9F9F
+            transition: border-color .3s
     &__black-bar
         display: flex 
         align-items: center
@@ -11,8 +15,35 @@
     &__player-description
         font-weight: 300
         font-size: 16px
-        line-height: 24px
+        line-height: 32px
         margin-left: 14px
+        position: relative
+        &:hover 
+            cursor: pointer
+        &:before 
+            content: ''
+            position: absolute
+            top: -8px
+            left: -65px
+            right: 0
+            bottom: 0
+            width: 48px
+            height: 48px
+            background-color: #666666
+            border-radius: 100%
+            transition: .3s
+        &:after 
+            content: ''
+            position: absolute
+            width: 0
+            height: 0
+            left: -47px
+            top: 2px
+            border-left: 19px solid $black
+            border-top: 14px solid transparent
+            border-bottom: 14px solid transparent
+            transition: border-color .3s
+
     &__player-wrapper
         width: 100%
         margin: 0 auto

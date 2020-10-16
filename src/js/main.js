@@ -165,3 +165,10 @@ $(".calculator-page__form").submit(function (e) {
   $(".after-sending").css("display", "block");
   e.preventDefault();
 });
+
+
+//стили для открытия вакансий
+$(".vacancies__item").click(function () {
+  $(this).children(".vacancies__info-wrapper").toggleClass("active");
+  $(this).children(".vacancies__little-title").toggleClass("vacancies__little-title_active");
+});

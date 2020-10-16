@@ -9,9 +9,19 @@
         height: 400px
         width: 340px
         margin: 10px
+        transition: .3s
+        &:hover
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15)
+            transition: .3s
         &_black
             color: $white
             background-color: #232323
+            &:hover
+                .cards__svg-wrapper
+                    margin-top: -30px
+                    transition: .3s
+    &__svg-wrapper
+        transition: .3s
     &__img
         width: 338px
         height: 230px

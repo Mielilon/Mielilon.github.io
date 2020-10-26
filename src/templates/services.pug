@@ -5,22 +5,35 @@ section.services
             .services__info-wrapper
                 ul.services__groups
                     li
-                        a(href="#").services__item Книги и журналы
+                        p.services__item.services__item_active(data-menu-item='books') Книги и журналы
                     li
-                        a(href="#").services__item.services__item_active Допечатная подготовка
+                        p.services__item(data-menu-item='prepress') Допечатная подготовка
                     li
-                        a(href="#").services__item Постпечатная обработка
+                        p.services__item(data-menu-item='post-press') Постпечатная обработка
                     li
-                        a(href="#").services__item Рекламная продукция
+                        p.services__item(data-menu-item='advertising') Рекламная продукция
                     li
-                        a(href="#").services__item Дизайн
+                        p.services__item(data-menu-item='design') Дизайн
                     li
-                        a(href="#").services__item Цифровая печать
+                        p.services__item(data-menu-item='digital-printing') Цифровая печать
                     li
-                        a(href="#").services__item Прочие услуги
+                        p.services__item(data-menu-item='other-services') Прочие услуги
                     li
-                        a(href="./services.html").services__item.all-services Все услуги
-                .services__catalogue
+                        a(href="./services.html").all-services Все услуги
+
+                .services__catalogue.services__catalogue_active(data-catalogue-item='books')
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-1.png", alt="")
+                        p.card__description Печать книг
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-2.png", alt="")
+                        p.card__description Печать журналов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-3.png", alt="")
+                        p.card__description Печать каталогов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-4.png", alt="")
+                        p.card__description Печать брошюр
                     a(href="#").services__card.card
                         img.card__img(src="./img/img-services/book-1.png", alt="")
                         p.card__description Печать книг
@@ -35,7 +48,7 @@ section.services
                         p.card__description Печать брошюр
 
 
-                .services__catalogue.services__catalogue_active
+                .services__catalogue(data-catalogue-item='prepress')
                     a(href="#").services__card.card
                         img.card__img(src="./img/img-services/preparation-1.png", alt="")
                         p.card__description Дизайн обложки
@@ -60,3 +73,135 @@ section.services
                     a(href="#").services__card.card
                         img.card__img(src="./img/img-services/book-4.png", alt="")
                         p.card__description Печать брошюр
+
+                .services__catalogue(data-catalogue-item='post-press')
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/preparation-1.png", alt="")
+                        p.card__description Дизайн обложки
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/preparation-2.png", alt="")
+                        p.card__description Набор текста
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/preparation-3.png", alt="")
+                        p.card__description Верстка
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/preparation-4.png", alt="")
+                        p.card__description Корректура
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-1.png", alt="")
+                        p.card__description Печать книг
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-2.png", alt="")
+                        p.card__description Печать журналов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-3.png", alt="")
+                        p.card__description Печать каталогов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-4.png", alt="")
+                        p.card__description Печать брошюр
+                    
+                .services__catalogue(data-catalogue-item='advertising')
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-1.png", alt="")
+                        p.card__description Печать книг
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-2.png", alt="")
+                        p.card__description Печать журналов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-3.png", alt="")
+                        p.card__description Печать каталогов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-4.png", alt="")
+                        p.card__description Печать брошюр
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-1.png", alt="")
+                        p.card__description Печать книг
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-2.png", alt="")
+                        p.card__description Печать журналов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-3.png", alt="")
+                        p.card__description Печать каталогов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-4.png", alt="")
+                        p.card__description Печать брошюр
+
+                .services__catalogue(data-catalogue-item='design')
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-1.png", alt="")
+                        p.card__description Печать книг
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-2.png", alt="")
+                        p.card__description Печать журналов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-3.png", alt="")
+                        p.card__description Печать каталогов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-4.png", alt="")
+                        p.card__description Печать брошюр
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-1.png", alt="")
+                        p.card__description Печать книг
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-2.png", alt="")
+                        p.card__description Печать журналов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-3.png", alt="")
+                        p.card__description Печать каталогов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-4.png", alt="")
+                        p.card__description Печать брошюр
+
+                .services__catalogue(data-catalogue-item='digital-printing')
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-1.png", alt="")
+                        p.card__description Печать книг
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-2.png", alt="")
+                        p.card__description Печать журналов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-3.png", alt="")
+                        p.card__description Печать каталогов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-4.png", alt="")
+                        p.card__description Печать брошюр
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-1.png", alt="")
+                        p.card__description Печать книг
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-2.png", alt="")
+                        p.card__description Печать журналов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-3.png", alt="")
+                        p.card__description Печать каталогов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-4.png", alt="")
+                        p.card__description Печать брошюр
+
+                .services__catalogue(data-catalogue-item='other-services')
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-1.png", alt="")
+                        p.card__description Печать книг
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-2.png", alt="")
+                        p.card__description Печать журналов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-3.png", alt="")
+                        p.card__description Печать каталогов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-4.png", alt="")
+                        p.card__description Печать брошюр
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-1.png", alt="")
+                        p.card__description Печать книг
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-2.png", alt="")
+                        p.card__description Печать журналов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-3.png", alt="")
+                        p.card__description Печать каталогов
+                    a(href="#").services__card.card
+                        img.card__img(src="./img/img-services/book-4.png", alt="")
+                        p.card__description Печать брошюр
+
+ 

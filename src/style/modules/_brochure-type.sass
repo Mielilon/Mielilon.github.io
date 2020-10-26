@@ -63,3 +63,41 @@ section.brochure-type
         border-color: $black 
     &__white-button
         border-color: $white
+
+@include respond-to(xxxl)
+    .brochure-type    
+        &__item
+            background-position: right
+            align-items: start
+            .brochure-type__info-wrapper
+                margin-left: 70px
+            &:hover
+                background-image: url('./../img/backgrounds/service/ brochure-type-1.png')
+                transition: 0
+                .brochure-type__info-wrapper
+                    margin-right: 0
+                    transition: 0
+            &-2
+                background-position: left
+                align-items: flex-end
+                .brochure-type__info-wrapper-2
+                    margin-right: 70px
+                &:hover
+                    background-image: url('./../img/backgrounds/service/ brochure-type-2.png')
+                    transition: 0
+                    .brochure-type__info-wrapper-2
+                        margin-left: 0
+                        transition: 0
+
+@include respond-to(md)
+    .brochure-type    
+        flex-direction: column
+        &__item
+            width: 100%
+            align-items: center
+            margin: 0
+            justify-content: center
+            &-2
+                .brochure-type__info-wrapper-2
+                    margin-right: 0
+                    margin-left: 70px

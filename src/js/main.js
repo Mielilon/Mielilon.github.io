@@ -172,3 +172,26 @@ $(".vacancies__item").click(function () {
   $(this).children(".vacancies__info-wrapper").toggleClass("active");
   $(this).children(".vacancies__little-title").toggleClass("vacancies__little-title_active");
 });
+
+
+//меню услуг
+$(".services__item").click(function () {
+  $('.services__item_active').removeClass("services__item_active");
+  $(this).addClass("services__item_active");
+
+  const id = $(this).attr('data-menu-item')
+  $('.services__catalogue_active').removeClass("services__catalogue_active");
+  $(`.services__catalogue[data-catalogue-item="${id}"]`).addClass('services__catalogue_active')
+
+  $('.services__subparagraphs').removeClass("active");
+  $(this).siblings('.services__subparagraphs').addClass("active");
+});
+
+$(".cases__item").click(function () {
+  $('.cases__item_active').removeClass("cases__item_active");
+  $(this).addClass("cases__item_active");
+
+  // const id = $(this).attr('data-menu-item')
+  // $('.services__catalogue_active').removeClass("services__catalogue_active");
+  // $(`.services__catalogue[data-catalogue-item="${id}"]`).addClass('services__catalogue_active')
+});

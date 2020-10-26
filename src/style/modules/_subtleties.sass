@@ -19,3 +19,12 @@
         margin-top: 85px
         width: 100%
         margin-bottom: 60px
+
+@include respond-to(sm)
+    .subtleties
+        .content
+            padding: 0 15px
+        &__description-wrapper
+            display: grid
+            grid-template-columns: 1fr
+            grid-gap: 0px

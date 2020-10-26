@@ -314,7 +314,16 @@ iframe.map
             background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='37' height='37' viewBox='0 0 37 37' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='18.5' cy='18.5' r='18' fill='%23191919' stroke='white' stroke-dasharray='2 2'/%3e%3c/svg%3e")
             opacity: 0
             transition: .3s
-        
+@include respond-to(xxl)   
+    .stats-circle
+        transform: scale(0.7)
+        left: 0
+@include respond-to(md)  
+    .stats-circle
+        transform: scale(0.6)
+@include respond-to(sm)
+    .stats-circle
+        display: none
 //close
 .close
     position: absolute

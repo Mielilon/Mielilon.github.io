@@ -3,6 +3,7 @@
     .content
         display: flex
         justify-content: space-between
+        flex-wrap: wrap
     &__img
         margin-top: -40px
         margin-right: -20px
@@ -51,3 +52,8 @@
             transition: .3s
         .white-fill
             transition: .3s
+
+@include respond-to(xl)
+    .brochure-size
+        .content
+            justify-content: center

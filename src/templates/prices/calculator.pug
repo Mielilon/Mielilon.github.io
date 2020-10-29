@@ -56,10 +56,10 @@
                             .characteristic__content-wrapper
                                 .characteristic__content
                                     .calculator__item
-                                        input.checkbox.calculator__checkbox(type="checkbox" id="black-and-white" name="colour" value="black-and-white")
+                                        input.checkbox.calculator__checkbox(type="radio" id="black-and-white" name="colour" value="black-and-white")
                                         label.label.label_row(for="black-and-white") Черно-белые
                                     .calculator__item.m-l-30
-                                        input.checkbox.calculator__checkbox(type="checkbox" id="colored" name="colour" value="colored")
+                                        input.checkbox.calculator__checkbox(type="radio" id="colored" name="colour" value="colored")
                                         label.label.label_row(for='colored') Цветные
                                     .calculator__item.calculator__item_col.m-l-30
                                         label.label(for='pages') Кол-во полос
@@ -71,12 +71,12 @@
                                     .calculator__item
                                         img(src="./img/icons/calculator-6.png", alt="").calculator__icon
                                         .calculator__info-wrapper
-                                            input.checkbox.calculator__checkbox(type="checkbox" id="one-block" name="colored-pages-in-a-block" value="one-block")
+                                            input.checkbox.calculator__checkbox(type="radio" id="one-block" name="colored-pages-in-a-block" value="one-block")
                                             label.label(for="one-block") Одним блоком
                                     .calculator__item.m-l-30
                                         img(src="./img/icons/calculator-7.png", alt="").calculator__icon
                                         .calculator__info-wrapper
-                                            input.checkbox.calculator__checkbox(type="checkbox" id="throw-about" name="colored-pages-in-a-block" value="throw-about")
+                                            input.checkbox.calculator__checkbox(type="radio" id="throw-about" name="colored-pages-in-a-block" value="throw-about")
                                             label.label(for="throw-about") Разбросаны по<br>книге
                                     .calculator__item.calculator__item_col.m-l-30
                                         label.label(for='pages-in-a-block') Кол-во полос
@@ -88,34 +88,34 @@
                                     .calculator__item
                                         img(src="./img/icons/calculator-8.png", alt="").calculator__icon
                                         .calculator__info-wrapper
-                                            input.checkbox.calculator__checkbox(type="checkbox" id="cover" name="binding" value="cover")
+                                            input.checkbox.calculator__checkbox(type="radio" id="cover" name="binding" value="cover")
                                             label.label(for="cover") Обложка
                                     .calculator__item.m-l-30
                                         img(src="./img/icons/calculator-9.png", alt="").calculator__icon
                                         .calculator__info-wrapper
-                                            input.checkbox.calculator__checkbox(type="checkbox" id="cover-with-flaps" name="binding" value="cover-with-flaps")
+                                            input.checkbox.calculator__checkbox(type="radio" id="cover-with-flaps" name="binding" value="cover-with-flaps")
                                             label.label(for="cover-with-flaps") Обложка с<br>клапанами
                                     .calculator__item.m-l-30
                                         img(src="./img/icons/calculator-10.png", alt="").calculator__icon
                                         .calculator__info-wrapper
-                                            input.checkbox.calculator__checkbox(type="checkbox" id="hard-cover" name="binding" value="hard-cover")
+                                            input.checkbox.calculator__checkbox(type="radio" id="hard-cover" name="binding" value="hard-cover")
                                             label.label(for="hard-cover") Твердый (7 БЦ)
                                     
                                 .characteristic__content.m-t-50
                                     .calculator__item
                                         img(src="./img/icons/calculator-11.png", alt="").calculator__icon
                                         .calculator__info-wrapper
-                                            input.checkbox.calculator__checkbox(type="checkbox" id="staple" name="binding" value="staple")
+                                            input.checkbox.calculator__checkbox(type="radio" id="staple" name="binding-2" value="staple")
                                             label.label(for="staple") Скоба
                                     .calculator__item.m-l-30
                                         img(src="./img/icons/calculator-12.png", alt="").calculator__icon
                                         .calculator__info-wrapper
-                                            input.checkbox.calculator__checkbox(type="checkbox" id="spring" name="binding" value="spring")
+                                            input.checkbox.calculator__checkbox(type="radio" id="spring" name="binding-2" value="spring")
                                             label.label(for="spring") Пружина
                                     .calculator__item.m-l-30
                                         img(src="./img/icons/calculator-13.png", alt="").calculator__icon
                                         .calculator__info-wrapper
-                                            input.checkbox.calculator__checkbox(type="checkbox" id="bolted" name="binding" value="bolted")
+                                            input.checkbox.calculator__checkbox(type="radio" id="bolted" name="binding-2" value="bolted")
                                             label.label(for="bolted") На болтах
                         .characteristic__item
                             p.characteristic__title Форзац
@@ -249,7 +249,7 @@
                                     .calculator__item
                                         input.calculator__num-input.num-input_long.num-input(type="number" id="circulation" name="circulation")
                         .characteristic__item
-                            p.characteristic__title Тираж
+                            p.characteristic__title Дополнительно
                             .characteristic__content-wrapper
                                 .characteristic__grid
                                     .characteristic__content.f-d-c
@@ -277,7 +277,6 @@
                                     textarea.calculator__textarea(name="address" placeholder='Введите адрес')
 
                     .calculator-page__characteristic-wrapper.tabs-content(data-tab-content="2")
-                
                 
                 .calculator-page__order-details.order-details
                     .order-details__cost-description Куда отправить расчет стоимости

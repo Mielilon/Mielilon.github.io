@@ -1,29 +1,57 @@
 section.calculator
-    padding-top: 100px
+    padding-top: 90px
     background-color: #F6F6F6
-    padding-bottom: 60px
     margin-top: 0
+    height: 760px
+
 .calculator
     .content
-        overflow: hidden
-        border-bottom: 1px solid $black
-        padding-bottom: 100px
+        padding-bottom: 0px
         position: relative
+        height: 520px
         &::before
+            background-color: #282828
+            content: ''
+            position: absolute
+            height: 1px
+            width: calc( 100% - (1 * (100% / 7) + 20px) )
+            right: 0
+            bottom: 2px
+        &::after
             content: ''
             position: absolute
             height: 1px
             width: calc( 1 * (100% / 7) )
-            background: linear-gradient(to right, $green calc( 100% - 20px ), #F6F6F6 calc( 100% - 20px ))
+            background-color: $green
             left: 0
-            bottom: -1px
+            bottom: 2px
+    .hr_none
+        &::before
+            display: none !important
+        &::after
+            display: none !important
     &__title
         text-align: center
     &-wrapper
         display: flex
         align-items: flex-start
-        justify-content: center
+        justify-content: space-between
         margin-right: -90px
+        opacity: 0
+        z-index: -10
+        width: 0
+        height: 0
+        position: absolute
+        left: -1000000000
+        &_active
+            opacity: 1
+            z-index: 4
+            height: auto
+            position: relative
+            left: 0
+            width: 100%
+            transition: .3s
+            transition-property: opacity
     &__items
         margin-top: 50px
         display: flex
@@ -58,6 +86,9 @@ section.calculator
         min-width: 100%
         height: 100px
         padding: 14px 23px
+        color: $light-black
+        font-size: 16px
+        font-family: Roboto
         &::placeholder
             font-family: Roboto
             font-weight: 300
@@ -103,32 +134,167 @@ section.calculator
         height: 13px
         left: 10px
         top: 14px
+    &__row, &__row-2
+        display: grid
+        justify-content: space-between
+        width: 100%
+        grid-template-columns: 1fr 1fr 1fr 1fr 
+    &__row
+        padding-bottom: 50px
+        border-bottom: 1px solid rgba(31, 30, 30, 0.1)
+
+
+[data-step-number="1"]
+    .calculator_pre
+        display: none
+
+[data-step-number="2"]
+    .content
+        &::before
+            width: calc( 100% - (2 * (100% / 7) + 20px) )
+        &::after
+            width: calc( 2 * (100% / 7) )
+[data-step-number="3"]
+    .content
+        &::before
+            width: calc( 100% - (3 * (100% / 7) + 20px) )
+        &::after
+            width: calc( 3 * (100% / 7) )
+[data-step-number="4"]
+    .content
+        &::before
+            width: calc( 100% - (4 * (100% / 7) + 20px) )
+        &::after
+            width: calc( 4 * (100% / 7) )
+
+[data-step-number="5"]
+    .content
+        &::before
+            width: calc( 100% - (5 * (100% / 7) + 20px) )
+        &::after
+            width: calc( 5 * (100% / 7) )
+[data-step-number="6"]
+    .content
+        &::before
+            width: calc( 100% - (6 * (100% / 7) + 20px) )
+        &::after
+            width: calc( 6 * (100% / 7) )
+
+[data-step-number="7"]
+    .calculator_next
+        display: none
+    .content
+        &::before
+            width: calc( 100% - (7 * (100% / 7) + 20px) )
+        &::after
+            width: calc( 7 * (100% / 7) )
+
+
+
+
+
+
+[data-step-content="4"], [data-step-content="5"], [data-step-content="6"]
+    flex-direction: column 
+
+[data-step-content="4"]
+    .calculator
+        &__row, &__row-2
+            grid-template-columns: 1.5fr 1fr 
+
+[data-step-content="5"]
+    .calculator
+        &__row, &__row-2
+            grid-template-columns: 1fr 1fr 1fr
+        &__row
+            padding-bottom: 30px
+
+[data-step-content="6"]
+    .calculator
+        &__row
+           grid-template-columns: 3fr 1fr
+           padding-bottom: 0
+        &__textarea
+            width: 565px
+            height: 70px
+            resize: none
+    .characteristic__grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+
+[data-step-content="7"]
+    .order-details
+        margin-left: 0
+        overflow: visible
+        display: grid
+        grid-template-columns: 1fr 3fr 2.2fr
+        &__items-wrapper
+            border-left: 1px solid #C4C4C4
+            border-top: none
+            padding: 0
+            padding-left: 35px
+            margin-top: 0
+        &__item-description, &__item-title
+            line-height: 22px
+            font-size: 14px
+            padding: 0
+        &__form-wrapper
+            display: block
+        .form__input
+            width: 430px
+            height: 50px
+        &__textarea
+            width: 430px
+            height: 85px !important
+            resize: none
+        #order-tel
+            display: block
+    .after-sending
+        margin-left: 0
+        &__title
+            margin-bottom: 10px
+        &__description
+            max-width: 460px
+        &__button
+            filter: drop-shadow(0px 5px 5px rgba(255, 255, 255, 0.2))
+            border-radius: 10px
+            border-color: #1F1E1E
+            margin-top: 50px
+            width: 200px
+            height: 45px
+            outline: none
+
+
 @include respond-to(xl)
-    .calculator-wrapper
-        display: flex
-        flex-direction: column
-@include respond-to(md)    
-    .calculator
-        &__items
-            flex-wrap: wrap !important
-        &__item:nth-child(3)
-            margin-top: 60px
-@include respond-to(xs)    
-    section.calculator
-        padding-top: 40px
-    .calculator
-        padding: 20px
-        .content
-            padding-bottom: 0
+    [data-step-number="1"]
+        .calculator-wrapper
+            flex-wrap: wrap
+        .calculator
+            &__items
+                flex-wrap: wrap
+    [data-step-number="2"]
+        .calculator-wrapper
+            flex-wrap: wrap
+        .calculator
+            &__items
+                flex-wrap: wrap
+@include respond-to(md)     
+    [data-step-number="2"]
+        .calculator
+            &__item
+                margin-right: 20px
 
-@media screen and ( max-width: 457px )
-    .calculator
-        &__item
-            margin-top: 0 !important
-            margin-bottom: 40px
-            margin-right: 30px
+@include respond-to(xs)
+    [data-step-number="1"]
+        .calculator-wrapper
+            margin-left: 20px
 
-@media screen and ( max-width: 400px )
-    .calculator
-        &__format-wrapper
+    [data-step-number="2"]
+        .calculator-wrapper
             flex-direction: column
+            margin-left: 20px
+        .calculator
+            &__items
+                flex-direction: column
+            &__item
+                margin: 20px 0 0 0 !important
+

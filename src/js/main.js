@@ -163,6 +163,9 @@ $(".calculator-page__form").submit(function (e) {
   const form = $(this);
   $(".calculator-page__order-details.order-details").css("display", "none");
   $(".after-sending").css("display", "block");
+  $(".calculator__order-title").css("display", "none");
+  $(".calculator__step").css("display", "none");
+  $(".hr").addClass("hr_none");
   e.preventDefault();
 });
 
@@ -195,3 +198,41 @@ $(".cases__item").click(function () {
   // $('.services__catalogue_active').removeClass("services__catalogue_active");
   // $(`.services__catalogue[data-catalogue-item="${id}"]`).addClass('services__catalogue_active')
 });
+
+//код для слайдера калькулятора
+let stepArray = [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+]
+
+let j = 1
+
+$('.calculator_pre').click(function() {
+    if(j === 1) {
+      return
+    } else {
+      j = j - 1
+      $(".calculator").attr("data-step-number", stepArray[j])
+      $('.calculator-wrapper').removeClass('calculator-wrapper_active')
+      $(`.calculator-wrapper[data-step-content="${j}"]`).addClass('calculator-wrapper_active')
+      $('.calculator__number').text('Шаг ' + stepArray[j] + '/7')
+    }
+ })
+
+ $('.calculator_next').click(function() {
+  if(j + 1 >= stepArray.length) {
+    return
+  } else {
+    j = j + 1
+    $(".calculator").attr("data-step-number", stepArray[j])
+    $('.calculator-wrapper').removeClass('calculator-wrapper_active')
+    $(`.calculator-wrapper[data-step-content="${j}"]`).addClass('calculator-wrapper_active')
+    $('.calculator__number').text('Шаг ' + stepArray[j] + '/7')
+  }
+ })

@@ -113,6 +113,10 @@ $(".video-reviews__item-wrapper").click(function () {
   $(this).addClass("video-reviews_active");
   
 });
+
+
+
+
 $(".video-reviews").click(function (e) {
   const videoReviewsItems = ".video-reviews__items-wrapper";
   if ($(e.target).closest(videoReviewsItems).length) return;
@@ -264,5 +268,16 @@ $('.gratitude__arrow').click(function() {
   } else {
     $('.gratitude__item_active').next(".gratitude__item").addClass('gratitude__item_active');
     $('.gratitude__item_active').prev(".gratitude__item_active").removeClass('gratitude__item_active');
+  }
+ })
+
+//переключение видео
+$('.video-reviews__item-wrapper_more').click(function() {
+  if($('.video-reviews__items-wrapper:last').hasClass("video-reviews__items-wrapper_active")) {
+    $('.video-reviews__items-wrapper_active').removeClass('video-reviews__items-wrapper_active');
+    $('.video-reviews__items-wrapper:first').addClass('video-reviews__items-wrapper_active');
+  } else {
+    $('.video-reviews__items-wrapper_active').next(".video-reviews__items-wrapper").addClass('video-reviews__items-wrapper_active');
+    $('.video-reviews__items-wrapper_active').prev(".video-reviews__items-wrapper_active").removeClass('video-reviews__items-wrapper_active');
   }
  })

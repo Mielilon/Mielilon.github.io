@@ -236,3 +236,19 @@ $('.calculator_pre').click(function() {
     $('.calculator__number').text('Шаг ' + stepArray[j] + '/7')
   }
  })
+
+ //убирает выделение с радио-кнопки
+$( "#pages" ).focus(function() {
+  $('input[name="colour"]').prop('checked', false);
+});
+  
+$( "#pages-in-a-block" ).focus(function() {
+  $('input[name="colored-pages-in-a-block"]').prop('checked', false);
+});
+
+$( "#height" ).focus(function() {
+  $('#customizable').prop('checked', true);
+});
+$( "#width" ).focus(function() {
+  $('#customizable').prop('checked', true);
+});

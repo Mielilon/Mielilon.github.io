@@ -84,27 +84,27 @@ section.calculator(data-step-number="1")
                                 .calculator__info-wrapper
                                     input.checkbox.calculator__checkbox(type="radio" id="cover" name="binding" value="cover")
                                     label.label(for="cover") Обложка
-                            .calculator__item.m-l-10
+                            .calculator__item
                                 img(src="./img/icons/calculator-9.png", alt="").calculator__icon
                                 .calculator__info-wrapper
                                     input.checkbox.calculator__checkbox(type="radio" id="cover-with-flaps" name="binding" value="cover-with-flaps")
                                     label.label(for="cover-with-flaps") Обложка с<br>клапанами
-                            .calculator__item.m-l-10
+                            .calculator__item
                                 img(src="./img/icons/calculator-10.png", alt="").calculator__icon
                                 .calculator__info-wrapper
                                     input.checkbox.calculator__checkbox(type="radio" id="hard-cover" name="binding" value="hard-cover")
                                     label.label(for="hard-cover") Твердый (7 БЦ)
-                            .calculator__item.m-l-10
+                            .calculator__item
                                 img(src="./img/icons/calculator-11.png", alt="").calculator__icon
                                 .calculator__info-wrapper
                                     input.checkbox.calculator__checkbox(type="radio" id="staple" name="binding-2" value="staple")
                                     label.label(for="staple") Скоба
-                            .calculator__item.m-l-10
+                            .calculator__item
                                 img(src="./img/icons/calculator-12.png", alt="").calculator__icon
                                 .calculator__info-wrapper
                                     input.checkbox.calculator__checkbox(type="radio" id="spring" name="binding-2" value="spring")
                                     label.label(for="spring") Пружина
-                            .calculator__item.m-l-10.m-r-0
+                            .calculator__item.m-r-0
                                 img(src="./img/icons/calculator-13.png", alt="").calculator__icon
                                 .calculator__info-wrapper
                                     input.checkbox.calculator__checkbox(type="radio" id="bolted" name="binding-2" value="bolted")
@@ -196,8 +196,8 @@ section.calculator(data-step-number="1")
                                     input.checkbox.calculator__checkbox(type="radio" id="sewing-with-thread-no" name="sewing-with-thread" value="no")
                                     label.label.label_row(for='sewing-with-thread-no') Нет
                         .calculator__items-wrapper
-                            h5.calculator__little-title Упаковка в пленку поэкземплярно
-                            .calculator__items
+                            h5.calculator__little-title.m-b-10 Упаковка в пленку <br> поэкземплярно
+                            .calculator__items.m-t-25
                                 .calculator__item
                                     input.checkbox.calculator__checkbox(type="radio" id="packaging-yes" name="packaging" value="yes")
                                     label.label.label_row(for="packaging-yes") Есть
@@ -206,7 +206,7 @@ section.calculator(data-step-number="1")
                                     label.label.label_row(for='packaging-no') Нет
                     .calculator__row-2
                         .calculator__items-wrapper
-                            h5.calculator__little-title.m-t-10.m-b-10 Тираж
+                            h5.calculator__little-title.m-b-10 Тираж
                             .calculator__items.m-t-0
                                 .calculator__item
                                     input.calculator__num-input.num-input_long.num-input(type="number" id="circulation" name="circulation")

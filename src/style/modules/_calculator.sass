@@ -208,6 +208,8 @@ section.calculator
             grid-template-columns: 1fr 1fr 1fr
         &__row
             padding-bottom: 30px
+        &__little-title
+            line-height: 26px
 
 [data-step-content="6"]
     .calculator
@@ -262,9 +264,43 @@ section.calculator
             width: 200px
             height: 45px
             outline: none
+@include respond-to(xxl)
+    section.calculator
+        height: 950px
+    .calculator
+        .content
+            height: 720px
 
-
+    [data-step-number="3"]
+        .calculator
+            &__items
+                display: grid
+                grid-template-columns: 1fr 1fr 1fr
+                grid-row-gap: 20px
+    [data-step-number="5"]
+        .calculator
+            &__row
+                display: grid
+                grid-template-columns: 1fr 1fr
+                grid-row-gap: 20px
+            &__item
+                margin-left: 0
+    [data-step-number="6"]
+        .calculator
+            &__little-title
+                margin-top: 20px
+            &__row
+                grid-template-columns: 1fr
+                
 @include respond-to(xl)
+    section.calculator
+        height: auto
+    .calculator
+        .content
+            height: 100%
+            padding-bottom: 40px
+        &__step
+            padding-bottom: 30px
     [data-step-number="1"]
         .calculator-wrapper
             flex-wrap: wrap
@@ -273,28 +309,134 @@ section.calculator
                 flex-wrap: wrap
     [data-step-number="2"]
         .calculator-wrapper
-            flex-wrap: wrap
+            flex-direction: column
+
+    [data-step-number="4"]
         .calculator
+            &__row
+                grid-template-columns: 1fr 
+                grid-row-gap: 40px
+            &__row-2
+                grid-template-columns: 1fr 1fr
+            &__little-title
+                margin-bottom: 0 
             &__items
-                flex-wrap: wrap
+                margin-top: 10px 
+    [data-step-number="7"]
+        .form__input
+            width: 100% !important
+
+
 @include respond-to(md)     
     [data-step-number="2"]
         .calculator
             &__item
                 margin-right: 20px
-
+    [data-step-number="3"]
+        .calculator
+            &__items
+                grid-template-columns: 1fr 1fr
+    [data-step-number="5"]
+        .calculator
+            &__row
+                grid-template-columns: 1fr
+            &__item
+                margin-left: 0
+    [data-step-number="6"]
+        .characteristic__grid
+            grid-template-columns: 1fr 1fr
+    [data-step-number="7"]
+        .order-details
+            grid-template-columns: 1fr 
+            &__items-wrapper
+                border-left: none
+                margin-top: 40px
+                padding-top: 20px
+                padding-left: 0
+                border-top: 1px solid #C4C4C4
+@include respond-to(sm)
+    [data-step-number="6"]
+        .calculator
+            &__row-2
+                grid-template-columns: 100%
+            &__textarea
+                width: 100%
+    [data-step-number="7"]
+        .order-details
+            grid-template-columns: calc( 100vw - 60px )
+            &__items-wrapper
+            &__item
+                flex-direction: row
+            &__item-title, &__item-description
+                text-align: start
 @include respond-to(xs)
-    [data-step-number="1"]
-        .calculator-wrapper
+    .calculator
+        .content
             margin-left: 20px
+            margin-right: 20px
 
     [data-step-number="2"]
         .calculator-wrapper
-            flex-direction: column
             margin-left: 20px
+            margin-right: 20px
         .calculator
             &__items
                 flex-direction: column
+                margin-top: 0
             &__item
                 margin: 20px 0 0 0 !important
+            &__little-title
+                margin-bottom: 10px
+                padding-right: 20px
+    [data-step-number="3"]
+        .calculator
+            &-wrapper
+                margin-left: 20px
+            &__items
+                grid-template-columns: 1fr
+            &__item:nth-child(4)
+                margin-top: 40px
 
+    [data-step-number="4"]
+            &__row
+                grid-template-columns: 1fr 
+                grid-row-gap: 40px
+            &__row-2
+                grid-template-columns: 1fr
+            &__little-title
+                margin-bottom: 0 
+            &__items
+                margin-top: 10px 
+                flex-wrap: wrap
+            &__item
+                margin-bottom: 10px
+    [data-step-number="5"]
+        .calculator
+            &__row
+                grid-template-columns: 1fr
+            &__item
+                margin-left: 0
+            &__little-title
+                margin-bottom: 0 
+            &__items
+                margin-top: 20px 
+                flex-wrap: wrap
+            &__item
+                margin-bottom: 10px
+    [data-step-number="6"]
+        .calculator
+            &__row-2
+                grid-template-columns: calc( 100% - 40px )
+
+@media screen and ( max-width: 400px )
+    [data-step-number="1"]
+        .calculator
+            &__icon
+                margin-bottom: 20px
+            &__little-title
+                margin-bottom: 0
+            &__items
+                margin-top: 20px
+    [data-step-number="6"]
+        .characteristic__grid
+            grid-template-columns: 1fr

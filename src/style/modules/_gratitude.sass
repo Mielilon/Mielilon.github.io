@@ -14,11 +14,19 @@
         width: 100%
         @include background-image('./../img/backgrounds/gratitude.png')
         margin-top: -30px
-        position: relative
         display: flex
         align-items: center
         justify-content: flex-end
         padding: 77px
+        opacity: 0
+        position: absolute
+        left: -100000px
+        &_active
+            opacity: 1
+            position: relative
+            left: auto
+            text-replace: opacity
+            transition: .3s
     blockquote.gratitude__description
         margin: 0
         line-height: 30px
@@ -94,15 +102,15 @@
         &__item
             height: auto
         &__arrow
-            top: 34%
+            top: auto
+            bottom: 10px
+            left: 48%
         &__title
             text-align: center
 @media screen and ( max-width: 470px )
     .gratitude
         &__subtitle
             padding: 0 20px
-        &__arrow
-            display: none
         &__info-title
             text-align: center
         blockquote.gratitude__description

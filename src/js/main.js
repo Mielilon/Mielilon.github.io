@@ -254,3 +254,14 @@ $( "#width" ).focus(function() {
 });
 
 
+//благодарности
+$('.gratitude__arrow').click(function() {
+  if($('.gratitude__item:last').hasClass("gratitude__item_active")) {
+    $('.gratitude__item_active').removeClass('gratitude__item_active');
+    $('.gratitude__item:first').addClass('gratitude__item_active');
+  } else {
+    $('.gratitude__item_active').next(".gratitude__item").addClass('gratitude__item_active');
+    $('.gratitude__item_active').prev(".gratitude__item_active").removeClass('gratitude__item_active');
+  }
+ })
+

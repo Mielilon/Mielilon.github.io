@@ -228,6 +228,7 @@ section.calculator
         margin-left: 0
         overflow: visible
         display: grid
+        max-height: 100%
         grid-template-columns: 1fr 3fr 2.2fr
         &__items-wrapper
             border-left: 1px solid #C4C4C4
@@ -393,11 +394,12 @@ section.calculator
             &-wrapper
                 margin-left: 20px
             &__items
-                grid-template-columns: 1fr
+                grid-template-columns: 1fr !important
             &__item:nth-child(4)
                 margin-top: 40px
 
     [data-step-number="4"]
+        .calculator
             &__row
                 grid-template-columns: 1fr 
                 grid-row-gap: 40px

@@ -252,3 +252,5 @@ $( "#height" ).focus(function() {
 $( "#width" ).focus(function() {
   $('#customizable').prop('checked', true);
 });
+
+

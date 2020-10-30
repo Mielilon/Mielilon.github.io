@@ -103,9 +103,13 @@ $(".video__black-bar").click(function () {
 });
 //код для открытия видео в отзывах
 $(".video-reviews__item-wrapper").click(function () {
+  let src = $(this).attr('data-reviews-src');
+  $("#video-reviews__full").attr('data-src', src);
+  
   $(".video-reviews__full-video").addClass("active");
   $(".video-reviews__item-wrapper").removeClass("video-reviews_active");
   $(this).addClass("video-reviews_active");
+  
 });
 $(".video-reviews").click(function (e) {
   const videoReviewsItems = ".video-reviews__items-wrapper";
@@ -193,10 +197,6 @@ $(".services__item").click(function () {
 $(".cases__item").click(function () {
   $('.cases__item_active').removeClass("cases__item_active");
   $(this).addClass("cases__item_active");
-
-  // const id = $(this).attr('data-menu-item')
-  // $('.services__catalogue_active').removeClass("services__catalogue_active");
-  // $(`.services__catalogue[data-catalogue-item="${id}"]`).addClass('services__catalogue_active')
 });
 
 //код для слайдера калькулятора
@@ -264,4 +264,3 @@ $('.gratitude__arrow').click(function() {
     $('.gratitude__item_active').prev(".gratitude__item_active").removeClass('gratitude__item_active');
   }
  })
-

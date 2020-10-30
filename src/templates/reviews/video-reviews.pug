@@ -3,18 +3,18 @@ section.video-reviews
         .content
             h1.video-reviews__title  Видео отзывы
             .video-reviews__items-wrapper
-                button.video-reviews__item-wrapper
+                button.video-reviews__item-wrapper(data-reviews-src='https://www.youtube.com/embed/2OEL4P1Rz04')
                     img.video-reviews__item(src="./img/video/video-reviews-1.png", alt="")
-                button.video-reviews__item-wrapper
+                button.video-reviews__item-wrapper(data-reviews-src='https://www.youtube.com/embed/X_3MmFX3FYo')
                     img.video-reviews__item(src="./img/video/video-reviews-1.png", alt="")
-                button.video-reviews__item-wrapper
+                button.video-reviews__item-wrapper(data-reviews-src='https://www.youtube.com/embed/X_3MmFX3FYo')
                     img.video-reviews__item(src="./img/video/video-reviews-1.png", alt="")
-                button.video-reviews__item-wrapper
+                button.video-reviews__item-wrapper(data-reviews-src='https://www.youtube.com/embed/2OEL4P1Rz04')
                     img.video-reviews__item(src="./img/video/video-reviews-1.png", alt="")
-                button.video-reviews__item-wrapper
+                button.video-reviews__item-wrapper(data-reviews-src='https://www.youtube.com/embed/2OEL4P1Rz04')
                     img.video-reviews__item(src="./img/video/video-reviews-1.png", alt="")
-                a(href="").video-reviews__item-wrapper
-                    img.video-reviews__item(src="./img/video/video-reviews-1.png", alt="")
+                button.video-reviews__item-wrapper_more(data-reviews-src='https://www.youtube.com/embed/X_3MmFX3FYo')
+                    img.video-reviews__item_more(src="./img/video/video-reviews-1.png", alt="")
                     .arrow-wrapper.video-reviews__arrow
                         .border-arrow
                             .arrow.arrow__big
@@ -23,5 +23,5 @@ section.video-reviews
     .container
         .content
             .video__player-wrapper.js-videoWrapper.active
-                iframe.video__iframe.js-videoIframe(src='', frameborder='0', allowtransparency='true', allowfullscreen='', data-src='https://www.youtube.com/embed/2OEL4P1Rz04')
+                iframe#video-reviews__full.video__iframe.js-videoIframe(src='', frameborder='0', allowtransparency='true', allowfullscreen='', data-src='https://www.youtube.com/embed/2OEL4P1Rz04')
                 button.video__poster.js-videoPoster

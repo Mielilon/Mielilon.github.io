@@ -105,6 +105,8 @@ $(".video__black-bar").click(function () {
 $(".video-reviews__item-wrapper").click(function () {
   let src = $(this).attr('data-reviews-src');
   $("#video-reviews__full").attr('data-src', src);
+  $("#video-reviews__full").attr("src", src);
+
   
   $(".video-reviews__full-video").addClass("active");
   $(".video-reviews__item-wrapper").removeClass("video-reviews_active");
